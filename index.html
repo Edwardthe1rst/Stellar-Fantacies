@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markdown Viewer</title>
+  <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background: #f5f5f5;
+      color: #222;
+    }
+    #content {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Markdown Viewer</h1>
+  <div id="content">Loading...</div>
+
+  <script>
+    // Specify the Markdown file
+    const markdownFile = 'example.ml'; // change to your file name
+
+    // Fetch the file and convert to HTML
+    fetch(markdownFile)
+      .then(response => {
+        if (!response.ok) throw new Error('Failed to load file');
+        return response.text();
+      })
+      .then(markdownText => {
+        const converter = new showdown.Converter();
+        const html = converter.makeHtml(markdownText);
+        document.getElementById('content').innerHTML = html;
+      })
+      .catch(err => {
+        document.getElementById('content').innerHTML = `<p style="color:red;">${err.message}</p>`;
+      });
+  </script>
+
+</body>
+</html>
