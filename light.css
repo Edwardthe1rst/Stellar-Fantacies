@@ -31,3 +31,11 @@ th, td {
 th {
   background-color: #c2b4a8;
 }
+
+#theme-toggle-container {
+  background-color: #F3E2D2;
+}
+
+#theme-toggle-slider {
+  background-color: #3B2A22;
+}
