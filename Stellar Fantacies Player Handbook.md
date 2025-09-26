@@ -1,6 +1,7 @@
 # Stellar Fantasies: Handbook + Legends Content
 
-      **By Bear Totem Press**
+**Bear Totem Press**
+![bear_totem_press.jpg](https://edwardthe1rst.github.io/Stellar-Fantacies/img/bear_totem_press.jpg)
 
 ### Content is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast.
 
@@ -9,1476 +10,90 @@
 # Table of Contents
 
 - [Changes](#changes)
-
   - [Changes from v00.07.03 to v00.07.05](#changes-from-v000703-to-v000705)
-
-    - [General](#general)
-
-    - [The Force Chapter](#the-force-chapter)
-
-    - [Encounters Chapter](#encounters-chapter)
-
-    - [Combat Chapter](#combat-chapter)
-
-    - [Allies and Opponents Chapter](#allies-and-opponents-chapter)
-
   - [Changes from v00.07.05 to v00.07.06](#changes-from-v000705-to-v000706)
-
-    - [General](#general-2)
-
-    - [The Force Chapter](#the-force-chapter-2)
-
-    - [Encounters Chapter](#encounters-chapter-2)
-
 - [Ability Scores](#ability-scores)
-
   - [Dark Side](#dark-side)
-
-    - [Dark Side Checks](#dark-side-checks)
-
-    - [Adding Dark Side to Other Checks](#adding-dark-side-to-other-checks)
-
-    - [Checks Using Tools, Weapons, or Equipment](#checks-using-tools-weapons-or-equipment)
-
-    - [Dark & Light Side Characters](#dark--light-side-characters)
-
-    - [Dark Urges](#dark-urges)
-
-    - [Dark Consumed Character](#dark-consumed-character)
-
-    - [Ending a Dark Urge](#ending-a-dark-urge)
-
   - [Ability Scores](#ability-scores-2)
-
-    - [Willpower Score](#willpower-score)
-
-    - [Moral Debuffs (Optional)](#moral-debuffs-optional)
-
-    - [Sanity Score (Optional)](#sanity-score-optional)
-
   - [Willpower Checks/Saves](#willpower-checkssaves)
-
-    - [Key Uses](#key-uses)
-
   - [Wisdom](#wisdom)
-
   - [Determining Ability Scores](#determining-ability-scores)
-
-    - [Ability Array](#ability-array)
-
-    - [Ability Arrays](#ability-arrays)
-
-    - [Point Buy](#point-buy)
-
-      - [Point Buy System](#point-buy-system)
-
-      - [Point Buy Costs](#point-buy-costs)
-
-    - [Species-Based Max Scores Table](#species-based-max-scores-table)
-
-      - [Point Buy System](#point-buy-system-2)
-
-      - [Point Buy Costs](#point-buy-costs-2)
-
 - [Character Species](#character-species)
-
   - [Near-Human](#near-human)
-
-    - [Near Human Species](#near-human-species)
-
-    - [Personality](#personality)
-
-    - [Average Height/Weight](#average-heightweight)
-
-    - [Age Groups](#age-groups)
-
-    - [Homeworlds](#homeworlds)
-
-    - [Languages](#languages)
-
-    - [Example Names](#example-names)
-
-    - [Adventurers](#adventurers)
-
-    - [Near-Human Species Traits](#near-human-species-traits)
-
-    - [Available Traits](#available-traits)
-
-    - [Automatic Language](#automatic-language)
-
   - [Bith](#bith)
-
-    - [Description](#description)
-
-    - [Personality](#personality-2)
-
-    - [Physical Description](#physical-description)
-
-    - [Average Height/Weight](#average-heightweight-2)
-
-    - [Age Groups](#age-groups-2)
-
-    - [Homeworld](#homeworld)
-
-    - [Languages](#languages-2)
-
-    - [Example Names](#example-names-2)
-
-    - [Adventurers](#adventurers-2)
-
-    - [Bith Species Traits](#bith-species-traits)
-
-    - [Automatic Languages](#automatic-languages)
-
   - [Bothan](#bothan)
-
-    - [Description](#description-2)
-
-    - [Personality](#personality-3)
-
-    - [Physical Description](#physical-description-2)
-
-    - [Age Groups](#age-groups-3)
-
-    - [Homeworld](#homeworld-2)
-
-    - [Languages](#languages-3)
-
-    - [Example Names](#example-names-3)
-
-    - [Adventurers](#adventurers-3)
-
-    - [Species Traits](#species-traits)
-
-    - [Automatic Languages](#automatic-languages-2)
-
   - [Cereans](#cereans)
-
-    - [Description](#description-3)
-
-    - [Personality](#personality-4)
-
-    - [Physical Description](#physical-description-3)
-
-    - [Age Groups](#age-groups-4)
-
-    - [Homeworld and Language](#homeworld-and-language)
-
-    - [Example Names](#example-names-4)
-
-    - [Adventurers](#adventurers-4)
-
-    - [Force Sensitivity](#force-sensitivity)
-
-    - [Cerean Species Traits](#cerean-species-traits)
-
-    - [Automatic Languages](#automatic-languages-3)
-
   - [Clawdite](#clawdite)
-
-    - [Description](#description-4)
-
-    - [Personality](#personality-5)
-
-    - [Physical Description](#physical-description-4)
-
-    - [Average Height/Weight](#average-heightweight-3)
-
-    - [Age Groups](#age-groups-5)
-
-    - [Homeworld](#homeworld-3)
-
-    - [Languages](#languages-4)
-
-    - [Clawdite Species Traits](#clawdite-species-traits)
-
-    - [Ability Score Adjustment](#ability-score-adjustment)
-
-    - [Medium Size](#medium-size)
-
-    - [Speed](#speed)
-
-    - [Shapeshift](#shapeshift)
-
-    - [Startle](#startle)
-
-    - [Automatic Languages](#automatic-languages-4)
-
-    - [Example Names](#example-names-5)
-
-    - [Adventurers](#adventurers-5)
-
   - [Codru-Ji](#codru-ji)
-
-    - [Description](#description-5)
-
-    - [Personality](#personality-6)
-
-    - [Physical Description](#physical-description-5)
-
-    - [Average Height/Weight](#average-heightweight-4)
-
-    - [Age Groups](#age-groups-6)
-
-    - [Homeworld](#homeworld-4)
-
-    - [Languages](#languages-5)
-
-    - [Example Names](#example-names-6)
-
-    - [Adventurers](#adventurers-6)
-
-    - [Species Traits](#species-traits-2)
-
-    - [Codru-Ji share the following Species Traits](#codru-ji-share-the-following-species-traits)
-
-    - [Automatic Languages](#automatic-languages-5)
-
   - [Devaronian](#devaronian)
-
-    - [Description](#description-6)
-
-    - [Personality](#personality-7)
-
-    - [Physical Description](#physical-description-6)
-
-    - [Average Height/Weight](#average-heightweight-5)
-
-    - [Age Groups](#age-groups-7)
-
-    - [Homeworld](#homeworld-5)
-
-    - [Devaronian Species Traits](#devaronian-species-traits)
-
-    - [Automatic Languages](#automatic-languages-6)
-
-    - [Example Names](#example-names-7)
-
-    - [Adventurers](#adventurers-7)
-
   - [Duros](#duros)
-
-    - [Description](#description-7)
-
-    - [Personality](#personality-8)
-
-    - [Physical Description](#physical-description-7)
-
-    - [Height/Weight](#heightweight)
-
-    - [Age Groups](#age-groups-8)
-
-    - [Homeworld](#homeworld-6)
-
-    - [Languages](#languages-6)
-
-    - [Example Names](#example-names-8)
-
-    - [Adventurers](#adventurers-8)
-
-    - [Species Traits](#species-traits-3)
-
-    - [Automatic Languages](#automatic-languages-7)
-
   - [Ewok](#ewok)
-
-    - [Description](#description-8)
-
-    - [Personality](#personality-9)
-
-    - [Physical Description](#physical-description-8)
-
-    - [Average Height/Weight](#average-heightweight-6)
-
-    - [Age Groups](#age-groups-9)
-
-    - [Homeworld](#homeworld-7)
-
-    - [Languages](#languages-7)
-
-    - [Example Names](#example-names-9)
-
-    - [Adventurers](#adventurers-9)
-
-    - [Ewok Species Traits](#ewok-species-traits)
-
   - [Falleen](#falleen)
-
-    - [Description](#description-9)
-
-    - [Culture](#culture)
-
-    - [Personality](#personality-10)
-
-    - [Physical Description](#physical-description-9)
-
-    - [Height/Weight](#heightweight-2)
-
-    - [Age Groups](#age-groups-10)
-
-    - [Homeworld](#homeworld-8)
-
-    - [Languages](#languages-8)
-
-    - [Example Names](#example-names-10)
-
-    - [Adventurers](#adventurers-10)
-
-    - [Falleen Species Traits](#falleen-species-traits)
-
-    - [Automatic Languages](#automatic-languages-8)
-
   - [Gungan](#gungan)
-
-    - [Description](#description-10)
-
-    - [Personality](#personality-11)
-
-    - [Physical Description](#physical-description-10)
-
-    - [Average Height/Weight](#average-heightweight-7)
-
-    - [Age Groups](#age-groups-11)
-
-    - [Homeworld and Languages](#homeworld-and-languages)
-
-    - [Homeworld](#homeworld-9)
-
-    - [Languages](#languages-9)
-
-    - [Example Names](#example-names-11)
-
-    - [Adventurers](#adventurers-11)
-
-    - [Gungan Species Traits](#gungan-species-traits)
-
-    - [Automatic Languages](#automatic-languages-9)
-
   - [Hutts](#hutts)
-
-    - [Description](#description-11)
-
-    - [Personality](#personality-12)
-
-    - [Physical Description](#physical-description-11)
-
-    - [Age Groups](#age-groups-12)
-
-    - [Homeworld](#homeworld-10)
-
-    - [Languages](#languages-10)
-
-    - [Example Names](#example-names-12)
-
-    - [Adventurers](#adventurers-12)
-
-    - [Species Traits](#species-traits-4)
-
-    - [Hutts share the following Species Traits](#hutts-share-the-following-species-traits)
-
-    - [Automatic Languages](#automatic-languages-10)
-
   - [Jawa](#jawa)
-
-    - [Description](#description-12)
-
-    - [Personality](#personality-13)
-
-    - [Physical Description](#physical-description-12)
-
-    - [Average Height/Weight](#average-heightweight-8)
-
-    - [Age Groups](#age-groups-13)
-
-    - [Homeworld](#homeworld-11)
-
-    - [Languages](#languages-11)
-
-    - [Example Names](#example-names-13)
-
-    - [Adventurers](#adventurers-13)
-
-    - [Jawa Species Traits](#jawa-species-traits)
-
-    - [Automatic Languages](#automatic-languages-11)
-
   - [Kaleesh](#kaleesh)
-
-    - [Description](#description-13)
-
-    - [Personality](#personality-14)
-
-    - [Physical Description](#physical-description-13)
-
-    - [Average Height/Weight](#average-heightweight-9)
-
-    - [Age Groups](#age-groups-14)
-
-    - [Homeworld and Language](#homeworld-and-language-2)
-
-    - [Homeworld](#homeworld-12)
-
-    - [Example Names](#example-names-14)
-
-    - [Adventurers and Species Traits](#adventurers-and-species-traits)
-
-    - [Species Traits](#species-traits-5)
-
-  - [Kaminoan](#kaminoan)
-
-    - [Description](#description-14)
-
-    - [Economy](#economy)
-
-    - [Personality](#personality-15)
-
-    - [Physical Description](#physical-description-14)
-
-    - [Average Height/Weight](#average-heightweight-10)
-
-    - [Age Groups](#age-groups-15)
-
-    - [Homeworld](#homeworld-13)
-
-    - [Languages](#languages-12)
-
-    - [Example Names](#example-names-15)
-
-    - [Adventurers](#adventurers-14)
-
-    - [Kaminoan Species Traits](#kaminoan-species-traits)
-
-    - [Automatic Languages](#automatic-languages-12)
-
+- [Kaminoan](#kaminoan)
   - [Kel Dor](#kel-dor)
-
-    - [Description](#description-15)
-
-    - [Atmospheric Dependence](#atmospheric-dependence)
-
-    - [Enhanced Senses](#enhanced-senses)
-
-    - [Personality and Traits](#personality-and-traits)
-
-    - [Physical Description](#physical-description-15)
-
-  - [Average Height/Weight](#average-heightweight-11)
-
-    - [Age Groups](#age-groups-16)
-
-    - [Homeworld and Languages](#homeworld-and-languages-2)
-
-    - [Example Names and Adventurers](#example-names-and-adventurers)
-
-    - [Species Traits](#species-traits-6)
-
-    - [Automatic Languages](#automatic-languages-13)
-
+  - [Average Height/Weight](#average-heightweight)
   - [Mon Calamari](#mon-calamari)
-
-    - [Description](#description-16)
-
-    - [Personality](#personality-16)
-
-    - [Physical Description](#physical-description-16)
-
-    - [Average Height/Weight](#average-heightweight-12)
-
-    - [Age Groups](#age-groups-17)
-
-    - [Homeworld](#homeworld-14)
-
-    - [Languages](#languages-13)
-
-    - [Example Names](#example-names-16)
-
-    - [Adventurers](#adventurers-15)
-
-    - [Mon Calamari Species Traits](#mon-calamari-species-traits)
-
-    - [Ability Score Adjustment](#ability-score-adjustment-2)
-
-    - [Size](#size)
-
-    - [Speed](#speed-2)
-
-    - [Breathe Underwater](#breathe-underwater)
-
-    - [Conditional Bonus Feat](#conditional-bonus-feat)
-
-    - [Automatic Languages](#automatic-languages-14)
-
   - [Nautolans](#nautolans)
-
-    - [Description](#description-17)
-
-    - [Personality](#personality-17)
-
-    - [Physical Description](#physical-description-17)
-
-    - [Average Height/Weight](#average-heightweight-13)
-
-    - [Age Groups](#age-groups-18)
-
-    - [Homeworld](#homeworld-15)
-
-    - [Languages](#languages-14)
-
-    - [Example Names](#example-names-17)
-
-    - [Adventurers](#adventurers-16)
-
-    - [Nautolan Species Traits](#nautolan-species-traits)
-
-    - [Automatic Languages](#automatic-languages-15)
-
   - [Quarren](#quarren)
-
-    - [Description](#description-18)
-
-    - [Personality](#personality-18)
-
-    - [Physical Description](#physical-description-18)
-
-    - [Height/Weight](#heightweight-3)
-
-    - [Age Groups](#age-groups-19)
-
-    - [Homeworld](#homeworld-16)
-
-    - [Languages](#languages-15)
-
-    - [Example Names](#example-names-18)
-
-    - [Adventurers](#adventurers-17)
-
-    - [Quarren Species Traits](#quarren-species-traits)
-
-    - [Automatic Languages](#automatic-languages-16)
-
   - [Rodian](#rodian)
-
-    - [Description](#description-19)
-
-    - [Personality](#personality-19)
-
-    - [Physical Description](#physical-description-19)
-
-    - [Average Height/Weight](#average-heightweight-14)
-
-    - [Age Groups](#age-groups-20)
-
-    - [Homeworld](#homeworld-17)
-
-    - [Languages](#languages-16)
-
-    - [Example Names](#example-names-19)
-
-    - [Adventurers](#adventurers-18)
-
-    - [Species Traits](#species-traits-7)
-
-    - [Ability Score Adjustment](#ability-score-adjustment-3)
-
-    - [Medium Size](#medium-size-2)
-
-    - [Speed](#speed-3)
-
-    - [Conditional Bonus Feat](#conditional-bonus-feat-2)
-
-    - [Heightened Awareness](#heightened-awareness)
-
-    - [Low-Light Vision](#low-light-vision)
-
-    - [Automatic Languages](#automatic-languages-17)
-
   - [Togruta](#togruta)
-
-    - [Description](#description-20)
-
-    - [Personality](#personality-20)
-
-    - [Physical Description](#physical-description-20)
-
-    - [Average Height/Weight](#average-heightweight-15)
-
-    - [Age Groups](#age-groups-21)
-
-    - [Homeworld](#homeworld-18)
-
-    - [Languages](#languages-17)
-
-    - [Example Names](#example-names-20)
-
-    - [Adventurers](#adventurers-19)
-
-    - [Togruta Species Traits](#togruta-species-traits)
-
-    - [Automatic Languages](#automatic-languages-18)
-
   - [Trandoshan](#trandoshan)
-
-    - [Description](#description-21)
-
-    - [Personality](#personality-21)
-
-    - [Physical Description](#physical-description-21)
-
-    - [Average Height/Weight](#average-heightweight-16)
-
-    - [Age Groups](#age-groups-22)
-
-    - [Homeworld](#homeworld-19)
-
-    - [Languages](#languages-18)
-
-    - [Example Names](#example-names-21)
-
-    - [Adventurers](#adventurers-20)
-
-    - [Trandoshan Species Traits](#trandoshan-species-traits)
-
   - [Twi'lek](#twilek)
-
-    - [Description](#description-22)
-
-    - [Personality](#personality-22)
-
-    - [Physical Description](#physical-description-22)
-
-    - [Average Height/Weight](#average-heightweight-17)
-
-    - [Age Groups](#age-groups-23)
-
-    - [Homeworld](#homeworld-20)
-
-    - [Languages](#languages-19)
-
-    - [Example Names](#example-names-22)
-
-    - [Adventurers](#adventurers-21)
-
-    - [Twi'lek Species Traits](#twilek-species-traits)
-
-    - [Automatic Languages](#automatic-languages-19)
-
   - [Wookiee](#wookiee)
-
-    - [Description](#description-23)
-
-    - [Personality](#personality-23)
-
-    - [Physical Description](#physical-description-23)
-
-    - [Age Groups](#age-groups-24)
-
-    - [Homeworld](#homeworld-21)
-
-    - [Languages](#languages-20)
-
-    - [Example Names](#example-names-23)
-
-    - [Adventurers](#adventurers-22)
-
-    - [Wookiee Species Traits](#wookiee-species-traits)
-
-    - [Automatic Languages](#automatic-languages-20)
-
   - [Zabrak](#zabrak)
-
-    - [Description](#description-24)
-
-    - [Personality](#personality-24)
-
-    - [Physical Description](#physical-description-24)
-
-    - [Age Groups](#age-groups-25)
-
-    - [Homeworld](#homeworld-22)
-
-    - [Languages](#languages-21)
-
-    - [Example Names](#example-names-24)
-
-    - [Adventurers](#adventurers-23)
-
-    - [Zabrak Species Traits](#zabrak-species-traits)
-
-    - [Automatic Languages](#automatic-languages-21)
-
   - [DROIDs](#droids)
-
-    - [Droid Player Character Guidelines](#droid-player-character-guidelines)
-
-    - [Standard Models](#standard-models)
-
-    - [Droid Size Table](#droid-size-table)
-
-    - [Droid Traits](#droid-traits)
-
-    - [Droid Traits](#droid-traits-2)
-
-    - [1st Degree Traits](#1st-degree-traits)
-
-    - [2nd Degree Traits](#2nd-degree-traits)
-
-    - [3rd Degree Traits](#3rd-degree-traits)
-
-    - [4th Degree Traits](#4th-degree-traits)
-
-    - [5th Degree Traits](#5th-degree-traits)
-
 - [Character Classes](#character-classes)
-
   - [Heroic Level](#heroic-level)
-
-    - [Leveling Up](#leveling-up)
-
-    - [Synced Characters](#synced-characters)
-
-    - [Dreams and Drakes](#dreams-and-drakes)
-
-    - [Class Features](#class-features)
-
-    - [Multiclassing](#multiclassing)
-
-    - [Class Level Features](#class-level-features)
-
   - [Force Acolyte](#force-acolyte)
-
-    - [Abilities](#abilities)
-
-    - [Class Features](#class-features-2)
-
-      - [Base Attack Bonus](#base-attack-bonus)
-
-      - [Defense Bonuses](#defense-bonuses)
-
-      - [Force Object/Weapon](#force-objectweapon)
-
-    - [Skills](#skills)
-
-    - [Starting Feats](#starting-feats)
-
-    - [Talent Trees](#talent-trees)
-
-    - [Bonus Feats](#bonus-feats)
-
-    - [Credits](#credits)
-
-    - [Skill Focus](#skill-focus)
-
-    - [Deflection](#deflection)
-
-      - [Deflect](#deflect)
-
-      - [Deflect II: Redirect](#deflect-ii-redirect)
-
-      - [Deflect III: Precise Redirect](#deflect-iii-precise-redirect)
-
-      - [Lightsaber Defense](#lightsaber-defense)
-
-      - [Dualist](#dualist)
-
-      - [Agile Defense](#agile-defense)
-
-      - [Dual Weapon Mastery](#dual-weapon-mastery)
-
-      - [Goude](#goude)
-
-      - [Lightsaber Throw](#lightsaber-throw)
-
-      - [Rush](#rush)
-
-      - [Hamstring](#hamstring)
-
-      - [Sturdy Defense](#sturdy-defense)
-
-      - [Weapon Finesse](#weapon-finesse)
-
-      - [Weapon Specialization (Melee)](#weapon-specialization-melee)
-
-      - [Crush](#crush)
-
-      - [Disarming Attack](#disarming-attack)
-
-      - [Lashing Disarm](#lashing-disarm)
-
-      - [Martial Arts II](#martial-arts-ii)
-
-      - [Martial Arts III](#martial-arts-iii)
-
-    - [Defensive Tactics](#defensive-tactics)
-
-      - [Master Disarmer](#master-disarmer)
-
-      - [Patient Defense](#patient-defense)
-
-    - [Pinning Attacks](#pinning-attacks)
-
-      - [Pin](#pin)
-
-      - [Trip](#trip)
-
-    - [Force Abilities](#force-abilities)
-
-      - [Clear Mind](#clear-mind)
-
-      - [Darkside Sense](#darkside-sense)
-
-      - [Foresight](#foresight)
-
-      - [Harmony](#harmony)
-
-      - [Improved Sustainer I](#improved-sustainer-i)
-
-      - [Improved Sustainer II](#improved-sustainer-ii)
-
-      - [Mystic Intuition](#mystic-intuition)
-
-      - [Mystic Perception](#mystic-perception)
-
-      - [Mystic Persuasion](#mystic-persuasion)
-
-      - [Mystic Piloting](#mystic-piloting)
-
-      - [Power of the Darkside](#power-of-the-darkside)
-
-      - [Resist Darkside](#resist-darkside)
-
-      - [Skilled Advisor](#skilled-advisor)
-
   - [Noble](#noble)
-
-    - [Abilities](#abilities-2)
-
-    - [Class Features](#class-features-3)
-
-      - [Defense Bonuses](#defense-bonuses-2)
-
-      - [Skill Points](#skill-points)
-
-    - [Starting Feats](#starting-feats-2)
-
-      - [Talent Trees](#talent-trees-2)
-
-      - [Bonus Feats](#bonus-feats-2)
-
-      - [Credits](#credits-2)
-
-      - [Talents](#talents)
-
-    - [Noble Class Table](#noble-class-table)
-
-    - [Influence](#influence)
-
-      - [Fast Talk](#fast-talk)
-
-      - [Presence](#presence)
-
-      - [Weaken Resolve](#weaken-resolve)
-
-      - [Shatter Resolve](#shatter-resolve)
-
-      - [Decimate Resolve](#decimate-resolve)
-
-      - [Bolster Ally](#bolster-ally)
-
-      - [Inspire](#inspire)
-
-      - [Inspire Resolve](#inspire-resolve)
-
-      - [Inspire Confidence](#inspire-confidence)
-
-      - [Inspire Fervor](#inspire-fervor)
-
-      - [Inspire Zeal](#inspire-zeal)
-
-    - [Leadership](#leadership)
-
-      - [Born Leader](#born-leader)
-
-      - [Born Leader: Distant Command](#born-leader-distant-command)
-
-      - [Coordinate](#coordinate)
-
-      - [Fearless Leader](#fearless-leader)
-
-      - [Rally](#rally)
-
-      - [Distant Command](#distant-command)
-
-      - [Trust](#trust)
-
-      - [Coordinate](#coordinate-2)
-
-      - [Commanding Presence](#commanding-presence)
-
-      - [Tactical Savvy](#tactical-savvy)
-
-      - [Hold the Line!](#hold-the-line)
-
-      - [Lead the Assault](#lead-the-assault)
-
-      - [Turn the Tide](#turn-the-tide)
-
-      - [Coordinated Leadership](#coordinated-leadership)
-
-      - [Reactionary Attack](#reactionary-attack)
-
-      - [Tactical Savvy](#tactical-savvy-2)
-
-      - [Unwavering Ally](#unwavering-ally)
-
-    - [Talents](#talents-2)
-
-      - [Lineage Connections](#lineage-connections)
-
-      - [Multi-Lingual](#multi-lingual)
-
-      - [Educated](#educated)
-
-      - [Spontaneous Skill](#spontaneous-skill)
-
-      - [Wealth](#wealth)
-
   - [Scoundrel](#scoundrel)
-
-    - [Abilities](#abilities-3)
-
-    - [Class Features](#class-features-4)
-
-      - [Defense Bonuses](#defense-bonuses-3)
-
-      - [Skills](#skills-2)
-
-    - [Starting Feats](#starting-feats-3)
-
-    - [Talent Trees](#talent-trees-3)
-
-    - [Bonus Feats](#bonus-feats-3)
-
-    - [Credits](#credits-3)
-
-    - [Talents](#talents-3)
-
-    - [Fortune](#fortune)
-
-      - [Fool's Luch](#fools-luch)
-
-      - [Fortune's Favor](#fortunes-favor)
-
-      - [Gambler](#gambler)
-
-      - [Knack](#knack)
-
-      - [Lucky Shot](#lucky-shot)
-
-    - [Additional Fortune Talents](#additional-fortune-talents)
-
-      - [Avert Disaster](#avert-disaster)
-
-      - [Better Lucky than Dead](#better-lucky-than-dead)
-
-      - [Dumb Luck](#dumb-luck)
-
-      - [Lucky Stop](#lucky-stop)
-
-      - [Mitigate Damage](#mitigate-damage)
-
-      - [Ricochet Shot](#ricochet-shot)
-
-      - [Uncanny Luck](#uncanny-luck)
-
-      - [Unlikely Shot](#unlikely-shot)
-
-      - [Misfortune](#misfortune)
-
-      - [Dastardly Strike](#dastardly-strike)
-
-      - [Disruptive](#disruptive)
-
-      - [Sneak Attack](#sneak-attack)
-
-      - [Walk the Line](#walk-the-line)
-
-    - [Pilot's Edge](#pilots-edge)
-
-      - [Spacer](#spacer)
-
-      - [Spacehound](#spacehound)
-
-      - [Starship Raider](#starship-raider)
-
-      - [Starship Warrior](#starship-warrior)
-
   - [Scout](#scout)
-
-    - [Class Features](#class-features-5)
-
-      - [Base Attack](#base-attack)
-
-      - [Defense Bonuses](#defense-bonuses-4)
-
-    - [Skill Points](#skill-points-2)
-
-    - [Starting Feats](#starting-feats-4)
-
-    - [Talent Trees](#talent-trees-4)
-
-    - [Bonus Feats](#bonus-feats-4)
-
-    - [Credits](#credits-4)
-
-    - [Scout Class Table](#scout-class-table)
-
-    - [Talents](#talents-4)
-
-      - [Expert Tracker](#expert-tracker)
-
-      - [Improved Initiative](#improved-initiative)
-
-      - [Keen Shot](#keen-shot)
-
-      - [Uncanny Dodge](#uncanny-dodge)
-
-      - [Uncanny Dodge II](#uncanny-dodge-ii)
-
-      - [Hidden Movement](#hidden-movement)
-
-      - [Improved Stealth](#improved-stealth)
-
-      - [Total Obscurement](#total-obscurement)
-
-      - [Dig In](#dig-in)
-
-      - [Extended Ambush](#extended-ambush)
-
-      - [Ghost Assailant](#ghost-assailant)
-
-      - [Hide in Plain Sight](#hide-in-plain-sight)
-
-      - [Obscurement and Stealth](#obscurement-and-stealth)
-
-      - [Hunker Down](#hunker-down)
-
-      - [Shadow Striker](#shadow-striker)
-
-      - [Blinding Strike](#blinding-strike)
-
-      - [Confusing Strike](#confusing-strike)
-
-      - [Unexpected Attack](#unexpected-attack)
-
-      - [Slip By](#slip-by)
-
-      - [Mobile Charger](#mobile-charger)
-
-      - [Long Strider](#long-strider)
-
-      - [Momentum Strike](#momentum-strike)
-
-      - [Mounted Defense](#mounted-defense)
-
-      - [Running Attack](#running-attack)
-
-      - [Skirmisher](#skirmisher)
-
-      - [Sprint](#sprint)
-
-    - [Sniper Talents](#sniper-talents)
-
-      - [Careful Shot](#careful-shot)
-
-      - [Deadeye](#deadeye)
-
-      - [Hunter’s Mark](#hunters-mark)
-
-      - [Survivor](#survivor)
-
-      - [Fringe Savant](#fringe-savant)
-
-      - [Evasion](#evasion)
-
-      - [Extreme Effort](#extreme-effort)
-
-      - [Demolitionist](#demolitionist)
-
   - [Soldier](#soldier)
-
-    - [Abilities](#abilities-4)
-
-      - [Class Features](#class-features-6)
-
-      - [Base Attack](#base-attack-2)
-
-      - [Defense Bonuses](#defense-bonuses-5)
-
-    - [Skills](#skills-3)
-
-    - [Starting Feats](#starting-feats-5)
-
-    - [Talent Trees](#talent-trees-5)
-
-    - [Bonus Feats](#bonus-feats-5)
-
-    - [Credits](#credits-5)
-
-    - [Class Features](#class-features-7)
-
-    - [Brawler](#brawler)
-
-      - [Expert Grappler](#expert-grappler)
-
-      - [Mighty Swing](#mighty-swing)
-
-      - [Stunning Club](#stunning-club)
-
-      - [Toughness](#toughness)
-
-      - [Demolishing Barrage](#demolishing-barrage)
-
-      - [Draw Fire](#draw-fire)
-
-      - [Draw Fire: Improved](#draw-fire-improved)
-
-      - [Harms Way](#harms-way)
-
-      - [Harms Way: Improved](#harms-way-improved)
-
-      - [Unrelenting Suppressive Fire](#unrelenting-suppressive-fire)
-
-      - [Juggernaut](#juggernaut)
-
-      - [Second Skin](#second-skin)
-
-      - [Deadeye](#deadeye-2)
-
-      - [Weapon Specialist](#weapon-specialist)
-
-      - [Increase the critical hit range of a weapon you have specialization in by 1.](#increase-the-critical-hit-range-of-a-weapon-you-have-specialization-in-by-1)
-
-      - [Critical Aim](#critical-aim)
-
-      - [Piercing Attack](#piercing-attack)
-
-      - [Weapon Specialization](#weapon-specialization)
-
-      - [Crushing Assault](#crushing-assault)
-
-      - [Disarming Attack](#disarming-attack-2)
-
-      - [Impaling Assault](#impaling-assault)
-
-      - [Shredder](#shredder)
-
   - [Technician](#technician)
-
-    - [Abilities](#abilities-5)
-
-    - [Class Features](#class-features-8)
-
-      - [Defense Bonuses](#defense-bonuses-6)
-
-      - [Skills](#skills-4)
-
-    - [Starting Feats](#starting-feats-6)
-
-    - [Talent Trees](#talent-trees-6)
-
-    - [Bonus Feats](#bonus-feats-6)
-
-    - [Starting Credits](#starting-credits)
-
-    - [Talents](#talents-5)
-
-      - [Superior Skill](#superior-skill)
-
-      - [Critical Skill Success](#critical-skill-success)
-
-      - [Exceptional Skill](#exceptional-skill)
-
-      - [Skill Confidence](#skill-confidence)
-
-    - [Medic](#medic)
-
-      - [Bring Them Back](#bring-them-back)
-
-      - [Emergency Team](#emergency-team)
-
-      - [Improved First Aid I](#improved-first-aid-i)
-
-      - [Improved First Aid II](#improved-first-aid-ii)
-
-      - [Improved First Aid III](#improved-first-aid-iii)
-
-      - [Personal Physician](#personal-physician)
-
-      - [Rapid Resuscitation](#rapid-resuscitation)
-
-      - [Hotwire](#hotwire)
-
-    - [Computer Skills](#computer-skills)
-
-      - [Personalized Modifications](#personalized-modifications)
-
-      - [Shield Expert](#shield-expert)
-
-      - [Slicer](#slicer)
-
-      - [Master Slicer](#master-slicer)
-
-      - [Trace](#trace)
-
-      - [Electronic Forgery](#electronic-forgery)
-
-      - [Electronic Sabotage](#electronic-sabotage)
-
-      - [Security Slicer](#security-slicer)
-
-      - [Virus](#virus)
-
-      - [Skill Focus Computers](#skill-focus-computers)
-
 - [FEATS](#feats)
-
   - [Staring Feats](#staring-feats)
-
   - [Core Feats](#core-feats)
-
   - [General Feats](#general-feats)
-
 - [Ace Pilot Tree](#ace-pilot-tree)
-
 - [Force Adept Tree](#force-adept-tree)
-
 - [Ideologue](#ideologue)
-
 - [Marksman Tree](#marksman-tree)
-
 - [Medic Tree](#medic-tree)
-
 - [Melee Dualist Tree](#melee-dualist-tree)
-
   - [Feats Table](#feats-table)
-
-    - [General Feats](#general-feats-2)
-
-    - [Ace Pilot](#ace-pilot)
-
-    - [Force Adept](#force-adept)
-
-    - [Ideologue](#ideologue-2)
-
-    - [Marksman](#marksman)
-
-    - [Medic](#medic-2)
-
-    - [Melee Dualist](#melee-dualist)
-
-    - [Tech Specialist](#tech-specialist)
-
-- [Skills](#skills-5)
-
+- [Skills](#skills)
 - [Defenses](#defenses)
-
   - [Shield Rating](#shield-rating)
-
   - [Damage Reduction](#damage-reduction)
-
   - [Damage Threshold](#damage-threshold)
-
-    - [Hit Location](#hit-location)
-
-    - [Results](#results)
-
   - [Poise](#poise)
-
   - [Primary Defenses](#primary-defenses)
-
-    - [Fortitude](#fortitude)
-
-    - [Reflex](#reflex)
-
-    - [Willpower](#willpower)
-
 - [Equipment](#equipment)
-
   - [Restricted Items](#restricted-items)
-
-    - [Licensed](#licensed)
-
-    - [Restricted](#restricted)
-
-    - [Military](#military)
-
-    - [Illegal](#illegal)
-
-    - [Getting a License](#getting-a-license)
-
-    - [The Black Market](#the-black-market)
-
-    - [Rare Equipment](#rare-equipment)
-
-    - [Exotic Equipment](#exotic-equipment)
-
 - [Combat](#combat)
-
   - [Weapons](#weapons)
-
-    - [Weapon Qualities](#weapon-qualities)
-
-      - [Damage Types](#damage-types)
-
-      - [Additional Qualities](#additional-qualities)
-
-    - [Weapon Sizes](#weapon-sizes)
-
-      - [Relative Size](#relative-size)
-
-      - [Multiple Weapon Fighting](#multiple-weapon-fighting)
-
-      - [Standard Sizes](#standard-sizes)
-
-    - [Table of Melee Weapons](#table-of-melee-weapons)
-
-      - [Traditional Melee](#traditional-melee)
-
-      - [Lightsabers](#lightsabers)
-
-    - [Weapon Ranges](#weapon-ranges)
-
-    - [Range Differences](#range-differences)
-
-    - [Table of Ranged Weapons](#table-of-ranged-weapons)
-
   - [Armor](#armor)
-
-    - [Armor Qualities](#armor-qualities)
-
-    - [Additional Qualities](#additional-qualities-2)
-
-    - [Table of Armor and Gear](#table-of-armor-and-gear)
-
-      - [Notes](#notes)
-
-    - [Armor Proficiency and Penalties](#armor-proficiency-and-penalties)
-
-      - [Penalty by Proficiency](#penalty-by-proficiency)
-
-      - [Equipment Bonuses](#equipment-bonuses)
-
-    - [Shields](#shields)
-
-      - [Personal Energy Shields](#personal-energy-shields)
-
-      - [Types of Energy Shields](#types-of-energy-shields)
-
-      - [Shield Rating Costs](#shield-rating-costs)
-
 - [The Force](#the-force)
-
   - [Common Views](#common-views)
-
-    - [Jedi](#jedi)
-
-      - [Light Jedi](#light-jedi)
-
-      - [Dark Jedi](#dark-jedi)
-
-      - [Grey Jedi](#grey-jedi)
-
   - [Force Alignment](#force-alignment)
-
   - [Force Schools](#force-schools)
-
-    - [Light and Dark](#light-and-dark)
-
-    - [Falling to the Dark Side](#falling-to-the-dark-side)
-
-      - [Gaining Darkside Score](#gaining-darkside-score)
-
-      - [Dark Urges](#dark-urges-2)
-
-      - [Ending a Dark Urge](#ending-a-dark-urge-2)
-
-      - [Reducing Darkside Score](#reducing-darkside-score)
-
   - [Force Points](#force-points)
-
-    - [Using Force Points](#using-force-points)
-
-    - [Light vs Dark Side Uses](#light-vs-dark-side-uses)
-
-    - [Force Check](#force-check)
-
-    - [Hybrid School Uses](#hybrid-school-uses)
-
   - [Force Schools](#force-schools-2)
-
-    - [Alchemy](#alchemy)
-
-    - [Augmentation](#augmentation)
-
-    - [Cognition](#cognition)
-
-    - [Sorcery](#sorcery)
-
-    - [Technokinesis](#technokinesis)
-
-    - [Telekinesis](#telekinesis)
-
-    - [Vitalism](#vitalism)
-
 - [Force Effect Guide](#force-effect-guide)
-
 - [Force Effect Guide – Other Schools](#force-effect-guide--other-schools)
-
 - [Running Stellar Fantasies: Encounters](#running-stellar-fantasies-encounters)
-
   - [Character Scale](#character-scale)
-
-    - [Initiative](#initiative)
-
-    - [Rounds](#rounds)
-
-    - [Taking Action](#taking-action)
-
-    - [Interjecting](#interjecting)
-
-    - [Actions of Opportunity](#actions-of-opportunity)
-
-    - [Squad Turns](#squad-turns)
-
-    - [Two-Systems](#two-systems)
-
   - [Melee Combat](#melee-combat)
-
-    - [Determining Poise](#determining-poise)
-
   - [Firefight](#firefight)
-
-    - [Crossover](#crossover)
-
   - [Actions](#actions)
-
-    - [Non-Heroic Actions](#non-heroic-actions)
-
-    - [Improvised Action](#improvised-action)
-
-    - [General Actions](#general-actions)
-
   - [Melee Actions (Requires Melee Dualist)](#melee-actions-requires-melee-dualist)
-
   - [Firefight Actions (Requires Marksman)](#firefight-actions-requires-marksman)
-
   - [Environment and Situation](#environment-and-situation)
-
-    - [Sensory](#sensory)
-
   - [Conditions](#conditions)
-
-    - [Body Parts](#body-parts)
 
 # Changes
 
@@ -1627,17 +242,11 @@ If they fail, they are still under the effect, and any future attempts to break 
 The following ability scores affect Willpower:
 
 | Ability | Effect |
-
 | --- | --- |
-
 | Dexterity| (See PHB Chapter 2) |
-
 | Charisma | (See PHB Chapter 2) |
-
 | Constitution | (See PHB Chapter 2) |
-
 | Intelligence | (See PHB Chapter 2) |
-
 | Strength | (See PHB Chapter 2) |
 
 ### Willpower Score
@@ -1681,15 +290,10 @@ An ability array is a group of numbers that you can use to determine your core a
 ### Ability Arrays
 
 | Level| Array Values |
-
 | --- | --- |
-
 | Low | 8, 10, 10, 10, 12, 14, 15 |
-
 | Standard | 8, 10, 10, 12, 13, 14, 15 |
-
 | High | 8, 10, 11, 12, 13, 14, 16 |
-
 | Epic | 8, 11, 12, 13, 13, 14, 16 |
 
 ### Point Buy
@@ -1723,39 +327,24 @@ The rest of her stats have a max of 20, since she has no pluses in those abiliti
 #### Point Buy System
 
 | Play Style | Point Pool |
-
 | --- | --- |
-
 | Low| 28 |
-
 | Standard | 31 |
-
 | High | 34 |
-
 | Epic | 39 |
 
 #### Point Buy Costs
 
 | Score | Cost |
-
 | --- | --- |
-
 | 6 | 0|
-
 | 8 | 1|
-
 | 9 | 2|
-
 | 10| 3|
-
 | 11| 4|
-
 | 12| 5|
-
 | 13| 6|
-
 | 14| 8|
-
 | 15| 10 |
 
 # Character Species
@@ -1763,6 +352,7 @@ The rest of her stats have a max of 20, since she has no pluses in those abiliti
 **v1.1**
 
 ## Near-Human
+![near_human.jpg](https://edwardthe1rst.github.io/Stellar-Fantacies/img/near_human.jpg)
 
 Humans dominate the Core Worlds and can be found in virtually every corner of the galaxy. They are the ancestors of early spacefaring pioneers, conquerors, traders, travelers, and refugees. Near-Humans have always been people on the move. As a result, they can be found on almost every inhabited planet. As a Species, Near-Humans are physically, culturally, and politically diverse. Hardy or fine, light-skinned or dark, Near-Humans remain one of the most dominant Species throughout all eras of play.
 
@@ -1969,6 +559,7 @@ Near-Humans aren't afraid to try anything, and Near-Human adventurers are the mo
 All Near-Humans can speak, read, and write Basic.
 
 ## Bith
+![bith.png](https://edwardthe1rst.github.io/Stellar-Fantacies/img/bith.png)
 
 - **Reference Book**: Star Wars Saga Edition Galaxy of Intrigue
 
@@ -2067,6 +658,7 @@ Given their predilection for intellectual and peaceful pursuits, most Bith heroe
 All Bith can speak, read, and write both Basic and Bith.
 
 ## Bothan
+![bothan.png](https://edwardthe1rst.github.io/Stellar-Fantacies/img/bothan.png)
 
 ### Description
 
@@ -2156,7 +748,8 @@ They gain Skill Focus (Gather Information) as a bonus Feat.
 
 All Bothans can speak, read, and write both Basic and Bothese.
 
-## Cereans
+## Cerean
+![cerean.png](https://edwardthe1rst.github.io/Stellar-Fantacies/img/cerean.png)
 
 ### Description
 
@@ -2225,6 +818,7 @@ This ability extends even to issues surrounding The Force, and a Cerean Jedi oft
 All Cereans can speak, read, and write both Basic and Cerean.
 
 ## Clawdite
+![clawdite.png](https://edwardthe1rst.github.io/Stellar-Fantacies/img/clawdite.png)
 
 **Reference: Book - Star Wars Saga Edition Scum and Villainy**
 
@@ -2321,6 +915,7 @@ Zam Wesell,
 Clawdites who leave Zolan find work as bounty hunters, assassins, or spies. Their unique nature makes them especially adept Scoundrels or Scouts
 
 ## Codru-Ji
+![codru_ji.png](https://edwardthe1rst.github.io/Stellar-Fantacies/img/codru_ji.png)
 
 **Reference Book: Star Wars Saga Edition Legacy Era Campaign Guide**
 
@@ -2399,6 +994,7 @@ One hand is their on-hand, another is their off-hand, and another two are their 
 All Codru-Ji can speak, read, and write both Basic and Codruese
 
 ## Devaronian
+![devaronian.png](https://edwardthe1rst.github.io/Stellar-Fantacies/img/devaronian.png)
 
 **Reference: Star Wars Saga Edition Web**
 
@@ -2483,6 +1079,7 @@ Male Devaronian heroes tend to be Scoundrels or Scouts. Invariably, they are fou
 Noteworthy female Devaronians on their homeworld tend to be Nobles and Scouts. However, any female Devaronian hero found elsewhere is already an exceptional individual who has decided to challenge the traditions of her culture. Such Devaronians may be of any class or role.
 
 ## Duros
+![duros.jpg](https://edwardthe1rst.github.io/Stellar-Fantacies/img/duros.jpg)
 
 ### Description
 
@@ -2549,6 +1146,7 @@ Duros share the following species traits:
 All Duros can speak, read, and write both Basic and Durese.
 
 ## Ewok
+![ewok.jpg](https://edwardthe1rst.github.io/Stellar-Fantacies/img/ewok.jpg)
 
 ### Description
 
@@ -2617,6 +1215,7 @@ An Ewok adventurer may be motivated by a love of excitement, a natural inquisiti
 **Automatic Languages**: Ewoks speak Ewokese, which has no written form.
 
 ## Falleen
+![falleen.png](https://edwardthe1rst.github.io/Stellar-Fantacies/img/falleen.png)
 
 **Reference Book: Star Wars Saga Edition Scum and Villainy**
 
@@ -2709,6 +1308,7 @@ If the attack fails to beat the target's Fortitude Defense, the target is immune
 All Falleen can speak, read, and write both Basic and Falleen.
 
 ## Gungan
+![gungan.png](https://edwardthe1rst.github.io/Stellar-Fantacies/img/gungan.png)
 
 ### Description
 
@@ -2793,6 +1393,7 @@ Many Gungans leave their underwater cities to explore as Scouts. Since the treat
 All Gungans can speak, read, and write both Gunganese and Basic
 
 ## Hutts
+![hutts.jpg](https://edwardthe1rst.github.io/Stellar-Fantacies/img/hutts.jpg)
 
 ### Description
 
@@ -2909,6 +1510,7 @@ Hutts are strong, hardy, and crafty; but are sluggish and cumbersome.
 All Hutts can speak, read, and write both Basic and Huttese
 
 ## Jawa
+![jawa.png](https://edwardthe1rst.github.io/Stellar-Fantacies/img/jawa.png)
 
 Reference: Book: Star Wars Saga Edition Scum and Villainy
 
@@ -2993,6 +1595,7 @@ However, their lifting and carrying limits are three-quarters of those of Medium
 All Jawas can speak, read, and write both Jawaese and the Jawa Trade Language.
 
 ## Kaleesh
+![kaleesh.png](https://edwardthe1rst.github.io/Stellar-Fantacies/img/kaleesh.png)
 
 **Reference Book: Star Wars Saga Edition Clone Wars Campaign Guide**
 
@@ -3068,7 +1671,8 @@ A Kaleesh with Survival as a Trained Skill gains Skill Focus (Survival) as a bon
 
 - **Penalties**: Kaleesh suffer a -2 penalty to both their Dexterity and Intelligence scores.
 
-## Kaminoan
+# Kaminoan
+![kaminoan.png](https://edwardthe1rst.github.io/Stellar-Fantacies/img/kaminoan.png)
 
 **Reference Book: Star Wars Saga Edition Clone Wars Campaign Guide**
 
@@ -3145,6 +1749,7 @@ Because they are genetically designed, Kaminoans are bred to fulfill a specific 
 All Kaminoans can speak, read, and write both Basic and Kaminoan
 
 ## Kel Dor
+![kel_dor.png](https://edwardthe1rst.github.io/Stellar-Fantacies/img/kel_dor.png)
 
 ### Description
 
@@ -3229,6 +1834,7 @@ Kel Dors commonly become:
 All Kel Dor can speak, read, and write both Basic and Kel Dor.
 
 ## Mon Calamari
+![mon_calamari.png](https://edwardthe1rst.github.io/Stellar-Fantacies/img/mon_calamari.png)
 
 ### Description
 
@@ -3312,7 +1918,8 @@ Keenly perceptive, a Mon Calamari with Perception as a Trained Skill gains Skill
 
 All Mon Calamari can speak, read, and write both Basic and Mon Calamarian
 
-## Nautolans
+## Nautolan
+![nautolan.png](https://edwardthe1rst.github.io/Stellar-Fantacies/img/nautolan.png)
 
 **Reference Book: Star Wars Saga Edition Clone Wars Campaign Guide**
 
@@ -3397,6 +2004,7 @@ Nautolans crave adventure and are as likely to be Nobles or Scoundrels as they a
 All Nautolans can communicate in Nautila, and can speak, read, and write Basic.
 
 ## Quarren
+![quarren.jpg](https://edwardthe1rst.github.io/Stellar-Fantacies/img/quarren.jpg)
 
 ### Description
 
@@ -3471,6 +2079,7 @@ Quarren leave their homeworld to escape their dependency on the Mon Calamari. Th
 All Quarren can speak, read, and write both Basic and Quarrenese
 
 ## Rodian
+![rodian.png](https://edwardthe1rst.github.io/Stellar-Fantacies/img/rodian.png)
 
 ### Description
 
@@ -3559,6 +2168,7 @@ Rodians ignore Obscurement (but not Total Obscurement) from darkness.
 All Rodians can speak, read, and write both Basic and Rodese
 
 ## Togruta
+![togruta.png](https://edwardthe1rst.github.io/Stellar-Fantacies/img/togruta.png)
 
 **Reference Book: Star Wars Saga Edition Force Unleashed Campaign Guide**
 
@@ -3631,6 +2241,7 @@ Strong-willed, highly independent Togrutas leave their homeworld to "Hunt among 
 All Togrutas can speak, read, and write both Basic and Togruti.
 
 ## Trandoshan
+![trandoshan.png](https://edwardthe1rst.github.io/Stellar-Fantacies/img/trandoshan.png)
 
 ### Description
 
@@ -3697,6 +2308,7 @@ A Trandoshan adventurer craves the thrill of battle. Some leave Trandosha to bec
 **Automatic Languages**: Trandoshans can speak, read, and write both Basic and Dosh.
 
 ## Twi'lek
+![twilek.jpg](https://edwardthe1rst.github.io/Stellar-Fantacies/img/twilek.jpg)
 
 ### Description
 
@@ -3777,6 +2389,7 @@ Twi'lek adventurers generally prefer to work behind the scenes as Scoundrels, le
 All Twi'leks can speak, read, and write both Basic and Ryl
 
 ## Wookiee
+![wookiee.png](https://edwardthe1rst.github.io/Stellar-Fantacies/img/wookiee.png)
 
 ### Description
 
@@ -3857,6 +2470,7 @@ Wookiee adventurers usually start out as wanderers or explorers as Scouts, but s
 All Wookiees can speak Shyriiwook and understand Basic.
 
 ## Zabrak
+![zabrak.jpg](https://edwardthe1rst.github.io/Stellar-Fantacies/img/zabrak.jpg)
 
 ### Description
 
@@ -3951,15 +2565,10 @@ A Droid's size determines its Ability modifiers, its size bonus to Reflex Defens
 ### Droid Size Table
 
 | **Size** | **Ability Score Adjustment** | **Special Size Modifiers** | **Cost Factor** |
-
 | --- | --- | --- | --- |
-
 | Large| +2 Strength, -2 Dexterity | -1 Reflex Defense, -5 Stealth, +2 Damage Reduction, +5 Damage Threshold, Twice the carrying capacity | 2x |
-
 | Medium | No special modifiers due to size | None | 1x |
-
 | Small | +2 Dexterity, -2 Strength | +1 Reflex Defense, +5 Stealth, -2 Damage Threshold, 3/4 the carrying capacity | 2x |
-
 | Tiny | +4 Dexterity, -4 Strength| +2 Reflex Defense, +10 Stealth, -5 Damage Threshold, 1/2 the carrying capacity | 5x |
 
 ### Droid Traits
@@ -4115,47 +2724,26 @@ At each even-numbered level (2nd, 4th, 6th, etc.), a Force Acolyte gains a bonus
 Force Acolyte Table
 
 | LEVEL | CLASS FEATURES|
-
 | --- | --- |
-
 | 1 | Defense Bonuses, Force Object/Weapon, Starting Feats, Talent, 3 Skill Points |
-
 | 2 | Bonus Feat, 3 Skill Points |
-
 | 3 | Talent, 3 Skill Points|
-
 | 4 | Bonus Feat, 3 Skill Points |
-
 | 5 | Talent, 3 Skill Points|
-
 | 6 | Bonus Feat, 3 Skill Points |
-
 | 7 | Talent, Force Object Construction, 3 Skill Points |
-
 | 8 | Bonus Feat, 3 Skill Points |
-
 | 9 | Talent, 3 Skill Points|
-
 | 10| Bonus Feat, 3 Skill Points |
-
 | 11| Talent, 3 Skill Points|
-
 | 12| Bonus Feat, 3 Skill Points |
-
 | 13| Talent, 3 Skill Points|
-
 | 14| Bonus Feat, 3 Skill Points |
-
 | 15| Talent, 3 Skill Points|
-
 | 16| Bonus Feat, 3 Skill Points |
-
 | 17| Talent, 3 Skill Points|
-
 | 18| Bonus Feat, 3 Skill Points |
-
 | 19| Talent, 3 Skill Points|
-
 | 20| Bonus Feat, 3 Skill Points |
 
 ### Credits
@@ -4479,47 +3067,26 @@ your training bonus in that skill.
 ### Noble Class Table
 
 | CLASS | LEVEL | CLASS FEATURES |
-
 | --- | --- | --- |
-
 | Noble | 1 | Defense Bonuses, Starting Feats, Talent, 10 skill points |
-
 | Noble | 2 | Bonus Feat, 10 skill points |
-
 | Noble | 3 | Talent, 10 skill points|
-
 | Noble | 4 | Bonus Feat, 10 skill points |
-
 | Noble | 5 | Talent, 10 skill points|
-
 | Noble | 6 | Bonus Feat, 10 skill points |
-
 | Noble | 7 | Talent, 10 skill points|
-
 | Noble | 8 | Bonus Feat, 10 skill points |
-
 | Noble | 9 | Talent, 10 skill points|
-
 | Noble | 10| Bonus Feat, 10 skill points |
-
 | Noble | 11 | Bonus Feat, 10 skill points |
-
 | Noble | 12 | Talent, 10 skill points|
-
 | Noble | 13 | Bonus Feat, 10 skill points |
-
 | Noble | 14 | Talent, 10 skill points|
-
 | Noble | 15 | Bonus Feat, 10 skill points |
-
 | Noble | 16 | Talent, 10 skill points|
-
 | Noble | 17 | Bonus Feat, 10 skill points |
-
 | Noble | 18 | Talent, 10 skill points|
-
 | Noble | 19| Bonus Feat, 10 skill points |
-
 | Noble | 20 | Talent, 10 skill points|
 
 ### Influence
@@ -4773,47 +3340,26 @@ Gain 5 skill focus points. These points can be spent to increase your skill focu
 **Scoundrel Class Table**
 
 | CLASS LEVEL | CLASS FEATURES|
-
 | --- | --- |
-
 | 1 | Defense Bonuses, Starting Feats, Talent, 6 Skill Points |
-
 | 2 | Bonus Feat, 6 Skill Points|
-
 | 3 | Talent, 6 Skill Points|
-
 | 4 | Bonus Feat, 6 Skill Points|
-
 | 5 | Talent, 6 Skill Points|
-
 | 6 | Bonus Feat, 6 Skill Points|
-
 | 7 | Talent, 6 Skill Points|
-
 | 8 | Bonus Feat, 6 Skill Points|
-
 | 9 | Talent, 6 Skill Points|
-
 | 10 | Bonus Feat, 6 Skill Points|
-
 | 11 | Talent, 6 Skill Points|
-
 | 12 | Bonus Feat, 6 Skill Points|
-
 | 13 | Talent, 6 Skill Points|
-
 | 14 | Bonus Feat, 6 Skill Points|
-
 | 15 | Talent, 6 Skill Points|
-
 | 16 | Bonus Feat, 6 Skill Points|
-
 | 17 | Talent, 6 Skill Points|
-
 | 18 | Bonus Feat, 6 Skill Points|
-
 | 19 | Talent, 6 Skill Points|
-
 | 20 | Bonus Feat, 6 Skill Points|
 
 Your focus bonus in a skill cannot be higher than your training bonus in that skill.
@@ -5023,47 +3569,26 @@ A 1st-level Scout starts play with:
 ### Scout Class Table
 
 | Level | CLASS FEATURES| Defense Bonuses, Starting Feats, Talent, Skill Points |
-
 | --- | --- | --- |
-
 | 1 | Defense Bonuses, Starting Feats, Talent, 8 Skill Points ||
-
 | 2 | Bonus Feat, 8 Skill Points ||
-
 | 3 | Talent, 8 Skill Points||
-
 | 4 | Bonus Feat, 8 Skill Points ||
-
 | 5 | Talent, 8 Skill Points||
-
 | 6 | Bonus Feat, 8 Skill Points ||
-
 | 7 | Talent, 8 Skill Points||
-
 | 8 | Bonus Feat, 8 Skill Points ||
-
 | 9 | Talent, 8 Skill Points||
-
 | 10| Bonus Feat, 8 Skill Points ||
-
 | 11| Talent, 8 Skill Points||
-
 | 12| Bonus Feat, 8 Skill Points ||
-
 | 13| Talent, 8 Skill Points||
-
 | 14| Bonus Feat, 8 Skill Points ||
-
 | 15| Talent, 8 Skill Points||
-
 | 16| Bonus Feat, 8 Skill Points ||
-
 | 17| Talent, 8 Skill Points||
-
 | 18| Bonus Feat, 8 Skill Points ||
-
 | 19| Talent, 8 Skill Points||
-
 | 20| Bonus Feat, 8 Skill Points ||
 
 ### Talents
@@ -5319,47 +3844,26 @@ A 1st-level Soldier starts play with 1500 credits.
 ### Class Features
 
 | Soldier Class Table | Level |
-
 | --- | --- |
-
 | 1st | Defense Bonuses, Starting Feats, Talent, 3 skill points |
-
 | 2nd | Bonus Feat, 3 skill points |
-
 | 3rd | Talent, 3 skill points|
-
 | 4th | Bonus Feat, 3 skill points |
-
 | 5th | Talent, 3 skill points|
-
 | 6th | Bonus Feat, 3 skill points |
-
 | 7th | Talent, 3 skill points|
-
 | 8th | Bonus Feat, 3 skill points |
-
 | 9th | Talent, 3 skill points|
-
 | 10th | Bonus Feat, 3 skill points |
-
 | 11th | Talent, 3 skill points|
-
 | 12th | Bonus Feat, 3 skill points |
-
 | 13th | Talent, 3 skill points|
-
 | 14th | Bonus Feat, 3 skill points |
-
 | 15th | Talent, 3 skill points|
-
 | 16th | Bonus Feat, 3 skill points |
-
 | 17th | Talent, 3 skill points|
-
 | 18th | Bonus Feat, 3 skill points |
-
 | 19th | Talent, 3 skill points|
-
 | 20th | Bonus Feat, 3 skill points |
 
 ### Brawler
@@ -5579,47 +4083,26 @@ A 1st-level Technician begins play with 1500 credits.
 Technician Class Table
 
 | CLASS LEVEL | CLASS FEATURES |
-
 | --- | --- |
-
 | 1 | Defense Bonuses, Starting Feats, Talent, 11 Skill Points |
-
 | 2 | Bonus Feat, 11 Skill Points |
-
 | 3 | Talent, 11 Skill Points|
-
 | 4 | Bonus Feat, 11 Skill Points |
-
 | 5 | Talent, 11 Skill Points|
-
 | 6 | Bonus Feat, 11 Skill Points |
-
 | 7 | Talent, 11 Skill Points|
-
 | 8 | Bonus Feat, 11 Skill Points |
-
 | 9 | Talent, 11 Skill Points|
-
 | 10 | Bonus Feat, 11 Skill Points |
-
 | 11 | Talent, 11 Skill Points|
-
 | 12 | Bonus Feat, 11 Skill Points |
-
 | 13 | Talent, 11 Skill Points|
-
 | 14 | Bonus Feat, 11 Skill Points |
-
 | 15 | Talent, 11 Skill Points|
-
 | 16 | Bonus Feat, 11 Skill Points |
-
 | 17 | Talent, 11 Skill Points|
-
 | 18 | Bonus Feat, 11 Skill Points |
-
 | 19 | Talent, 11 Skill Points|
-
 | 20 | Bonus Feat, 11 Skill Points |
 
 ### Talents
@@ -6141,155 +4624,94 @@ You gain a Poise stat (Wis + Con + Darkside bonuses).
 ### General Feats
 
 | Feat | Prerequisite | Benefit |
-
 | --- | --- | --- |
-
 | Bounty Hunter | None | FP: +2 on attacks against and checks made to track a chosen target. |
-
 | Blind to the Force| None | Unable directly sense or interact with the force, however you have twice the number of force points. |
-
 | Critical Attack | None | FP: Increase the critical hit range of an attack by 5. |
-
 | Force Sensitive | None | You can feel the living force around you. |
-
 | Labyrinthine Mind | None | FP: End all Mind-Affecting effects currently effecting you. |
-
 | Strong in the Force| None | Your Force Dice become d8s instead of d6s. |
 
 ### Ace Pilot
 
 | Feat | Prerequisite | Benefit |
-
-|-------------------|--------------|-------------------------------------------------------------------------|
-
+|---|---|---|
 | Ace Pilot¹ | None | Access to Ace Pilot feat tree and additional actions for dogfights. |
-
 | A Few Maneuvers | Ace Pilot | FP: +2 reflex defense and make missile loose their target lock. |
-
 | Strafe | Ace Pilot | FP: Make an attack against every target your vehicle passes this turn. |
-
 | Vehicular Combat | Ace Pilot | FP: Negate attacks made against the vehicle you are piloting. |
 
 ### Force Adept
 
 | Feat | Prerequisite | Benefit |
-
 | --- | --- | --- |
-
 | Force Adept¹ | None | Access to Force Adept feat tree and additional actions for using force powers. |
-
 | Force School Specialization I| Force Adept | In the school of your choice, treat force powers as if you used 1 more force point. |
-
 | Force School Specialization II| Force Adept, Force School Specialization I | In the school of your choice, treat force powers as if you used 2 more force points. |
-
 | Force School Specialization III| Force Adept, Force School Specialization II | In the school of your choice, treat force powers as if you used 2 more force points. |
-
 | Hurl | Force Specialization (Telekinesis) | FP: Gain 6 uses of the Force Hurl attack action. |
-
 | Jolt | Force Specialization (Sorcery) | FP: Gain 6 uses of the Force Jolt attack action. |
-
 | Shock | Force Specialization (Sorcery) | FP: Gain 6 uses of the Force Shock attack action. |
 
 ### Ideologue
 
 | Feat | Prerequisite | Benefit |
-
 | --- | --- | --- |
-
 | Ideologue¹ | None | Access to the Ideologue feat tree and additional actions for dialogue and leadership. |
-
 | Coordinated Attack| Ideologue | FP: Take the attack and aid actions as 1 action. |
-
 | Attract Minion | Ideologue, Charisma 13 | FP: A loyal minion joins the encounter under your control. |
-
 | Grand Leader | Ideologue | FP: Grant 5 shield rating to 3 allies within line of sight. |
-
 | Linguist | Ideologue, Intelligence 13 | FP: Understand a phrase in a language you don’t understand. |
-
 | Recruit Enemy | Ideologue, Charisma 13 | FP: Attempt to sway a non-heroic enemy to join your side. |
 
 ### Marksman
 
 | Feat | Prerequisite | Benefit |
-
 | --- | --- | --- |
-
 | Marksman¹ | None | Access to the Marksman feat tree and additional actions for firefights. |
-
 | Far Shot | Marksman | FP: Increase the max range of your weapon by 6 spaces. |
-
 | Penetrating Shot | Marksman | FP: Make an attack against every enemy in a line. |
-
 | Point Blank Shot | Marksman | FP: Decrease the min range of your weapon by 6 spaces. +1d6 damage at point blank range. |
-
 | Quick Draw I | Marksman | FP: Make an attack before combat or before someone attacks you. |
-
 | Quick Draw II | Marksman, Quick Draw I | FP: Make an attack before someone attacks you. |
-
 | Shred Armor | Marksman | FP: Reduce targets DR by 1d6. (Must deal physical damage) |
-
 | Sniper | Marksman | FP: Ignore Cover bonus. |
-
 | Suppression Fire | Marksman, Strength 13 | FP: Impose -1d6 on attacks of targets within a cone. |
 
 ### Medic
 
 | Feat | Prerequisite | Benefit |
-
 | --- | --- | --- |
-
 | Medic¹ | Trained in _Treat Injury_ skill | Access to the Medic feat tree and additional actions for treating injuries. |
-
 | Cybernetic Surgery | Medic | Can use the surgery activity to replace body parts cybernetics. FP: Can use repair kit to heal organic creatures. |
-
 | Experienced Medic | Medic | FP: Simultaneously perform surgery on a number of creatures equal to your Wisdom or Intelligence modifier. |
-
 | First Aid | Medic | FP: Use the Medpac action without consuming a medpac (this cannot be used on the Medpac activity). |
-
 | Perfect Dose | Medic | FP: Reduce crit fail increase of stims by force die. |
-
 | Shake it Off | Medic | FP: Double the effectiveness of stims. |
-
 | Surgical Experience| Medic | FP: Remove 1 persistent condition in 4 actions. Free: Remove 1 persistent condition in 10 minutes. |
 
 ### Melee Dualist
 
 | Feat | Prerequisite | Benefit |
-
 | --- | --- | --- |
-
 | Melee Dualist¹ | None | Access to the Melee Dualist feat tree and additional actions for melee fights. |
-
 | Acrobatic Strike | Melee Dualist| FP: Move past someone, attacking them and not invoking an attack of opportunity. |
-
 | Bind | Melee Dualist| FP: Bind blades with opponent to lower their poise and talk to them. |
-
 | Cleave | Melee Dualist| FP: When your target dies, attack an adjacent target dealing remaining damage. Add force die to both attack and damage. |
-
 | Double Attack | Melee Dualist| FP: Attack twice with one action. |
-
 | Faint | Melee Dualist| FP: Target’s poise is -5 for next attack. |
-
 | Fluster | Melee Dualist| FP: Open opponent to opportunity attacks. |
-
 | Strike to Maneuver| Melee Dualist| FP: Move target 6 spaces. |
-
 | Whirlwind Attack | Melee Dualist| FP: Make an attack against every adjacent target. |
 
 ### Tech Specialist
 
 | Feat | Prerequisite | Benefit |
-
 | --- | --- | --- |
-
 | Tech Specialist¹ | None | Access to the Tech Specialist feat tree and additional actions for using technology. |
-
 | Defense Works | Tech Specialist| FP: Create 1 space of half cover. |
-
 | Field Engineer | Tech Specialist| FP: Combine any two pieces of technology to change or boost their effects. |
-
 | Slicing Expert | Tech Specialist| FP: Issue an admin command from a terminal without access. |
-
 | Saboteur | Tech Specialist| FP: Deal double damage to Vehicles and Objects. |
 
 **Note**: These are core feats. Your first core feat grants you an additional 3 feats from the same tree.
@@ -6391,17 +4813,11 @@ If you want to fabricate a false identity or steal another person’s identity, 
 If either of these checks fails by 5 or more, the local authorities are alerted to your activities.
 
 | RESTRICTION RATING | LICENSE FEE | BLACK MARKET COST | SKILL DC | TIME REQUIRED |
-
-|---------------------|------------------|-------------------|----------|---------------|
-
+|---|---|---|---|---|
 | 1. Licensed | $5\% \times 2$ | 10 | 10 | 1 day |
-
 | 2. Restricted | $10\% \times 3$ | 15 | 15 | 2 days |
-
 | 3. Military | $20\% \times 4$ | 20 | 20 | 5 days |
-
 | 4. Illegal | $50\% \times 5$ | 25 | 25 | 10 days |
-
 | 5. Outright Illegal | $N/A \times 6$ | 30 | 30 | 20 days |
 
 **Notes**
@@ -6569,45 +4985,27 @@ Targets of an attack with the _Delay_ quality (including AOE effects) may use a 
 #### Traditional Melee
 
 | Category | Weapon | Cost | Damage | Stun | Crit | Weight | Additional Qualities / Type | Range | Availability |
-
-|----------|---------------------|-------|--------|------|------|--------|-----------------------------|-------|--------------|
-
+|---|---|---|---|---|---|---|---|---|---|
 | Tiny | Vibro-dagger | 200 | 3d4 | No | 18 | 1 kg | +5 Conceal, Physical (Piercing) | Close | Unrestricted |
-
 | Small | Vibro-blade | 250 | 3d6 | No | 18 | 1.8 kg | Physical (Piercing) | - | Licensed |
-
 | Medium | Force-pike | 500 | 3d8 | Yes | 20 | 2 kg | Physical / Energy | - | Restricted |
-
 | Small | Vibro-bayonet | 250 | 3d6 | No | 18 | 1 kg | Physical | - | Military |
-
 | Small | Dire Vibro-blade | 250 | 3d10 | No | 18 | 2 kg | Physical | - | Restricted |
-
 | Small | Shield | 500 | No | No | No | 6 kg | Defensive | - | Restricted |
-
 | Large | Double Vibro-blade | 550 | 3d6² | No | 18 | 4 kg | Physical | - | Restricted |
-
 | Large | Electro-Staff | 3,000 | 3d6² | Yes | 20 | 2 kg | Physical / Energy | - | Restricted |
-
 | Large | Vibro-blade | 500 | 3d12 | No | 18 | 8 kg | Physical | - | Military |
 
 #### Lightsabers
 
 | Category | Weapon | Cost | Damage | Stun | Crit | Weight | Type | Range | Availability |
-
-|----------|---------------------|-------|--------|------|------|--------|----------------|-------|--------------|
-
+|---|---|---|---|---|---|---|---|---|---|
 | Tiny | Lightsaber, Dagger | 2,000 | 4d4 | No | 20 | 0.5 kg | Energy, Exotic | Close | Illegal |
-
 | Small | Lightsaber, Short | 2,500 | 4d6 | No | 20 | 0.5 kg | Energy, Exotic | Close | Illegal |
-
 | Medium | Dire Lightsaber | 4,000 | 4d10 | No | 20 | 1 kg | Energy, Exotic | Close | Illegal |
-
 | Medium | Lightsaber | 3,000 | 4d8 | No | 20 | 1 kg | Energy, Exotic | Close | Illegal |
-
 | Large | Lightsaber, Double | 7,000 | 4d8² | No | 20 | 2 kg | Energy, Exotic | Close | Illegal |
-
 | Large | Lightsaber, Great | 5,000 | 4d12 | No | 20 | 2 kg | Energy, Exotic | Close | Illegal |
-
 | Large | Lightpike | 3,500 | 4d8 | No | 20 | 3 kg | Energy, Exotic | Close | Illegal |
 
 - See D&D 5e Player’s Handbook for more.
@@ -6627,19 +5025,12 @@ This could be a clip or magazine or other container of bullets, a battery pack f
 Each ranged weapon has an effective range within which they can be used without penalty. The ranges are point blank, short, medium, long, and extreme.
 
 | Range | Firefighting | Sharpshooting | Melee|
-
 | --- | --- | --- | --- |
-
 |Point Blank| Within the target's melee reach | NA | 1.5m or 5ft |
-
 |Close| 1 space| -1 for close range weapon | 1-6 spaces |
-
 | Short | 15m, 50ft | 1 Space | 7-12 spaces |
-
 |Medium| 30m, 100ft | 2 Spaces | 13-18 spaces |
-
 |Long| 300m, 500ft| 3 Spaces | 19-24 spaces |
-
 |Extreme| 600m, 2000ft | 4 Spaces | 25-30 spaces |
 
 No Penalty for Short Range Weapons
@@ -6667,79 +5058,42 @@ Attacks against a target within melee range incur a -5 situation penalty.
 ### Table of Ranged Weapons
 
 | Weapon/Item | COST | DAMAGE | STUN | CRIT | WEIGHT | ADDITIONAL QUALITIES | RANGE | AVAILABILITY |
-
-| ------------------------------ | -------- | -------- | ------ | ------ | -------- | --------------------------------------------- | --------- | ---------------------- |
-
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Accessories** | | | | | | | | |
-
 | Ammo Pack | 25 | --- | --- | --- | 0.1 kg | --- | --- | --- |
-
 | Holster | 25 | --- | --- | --- | 0.5 kg | --- | --- | --- |
-
 | Concealed Holster | 50 | --- | --- | --- | 0.2 kg | +2 Conceal | --- | Restricted |
-
 | **Modifications** | | | | | | | | |
-
 | Auto-fire Only³ | +50% | --- | --- | --- | --- | 1 AOE | --- | One step less legal |
-
 | Auto-fire Optional³ | +100% | --- | --- | --- | --- | Optional 1 AOE | --- | Two steps less legal |
-
 | Ion³ | -50% | --- | No | 20 | --- | Ion | --- | --- |
-
 | Scatter-shot³ | --- | -1 die | No | --- | --- | 2dx scatter² | -1 | --- |
-
 | Slug-thrower³ | --- | -1 die | No | 18 | +0.5kg | Physical | --- | Illegal |
-
 | Sporting³ | -50% | -1 die | type | --- | --- | --- | +1 | One step more legal |
-
 | **Tiny** | | | | | | | | |
-
 | Hold-out Pistol, Blaster | 500 | 3d4 | No | 20 | 0.5 kg | Energy, +5 Conceal, 1 Ammo | Close | Military |
-
 | **Small** | | | | | | | | |
-
 | Pistol, Blaster | 500 | 3d6 | 2d6 | 20 | 1.3 kg | Energy, 10 Ammo | Short | Restricted |
-
 | **Medium** | | | | | | | | |
-
 | Heavy Pistol, Blaster | 750 | 3d8 | 2d8 | 20 | 1.3 kg | Energy, 5 Ammo | Short | Military |
-
 | **Large** | | | | | | | | |
-
 | Grande Launcher⁴⁵ | 500 | Special | Special | Special | 5 kg | --- | Short | Military |
-
 | Rifle, Blaster | 1000 | 3d8 | 2d8 | 20 | 4.5 kg | Energy, 15 Ammo | Medium | Restricted |
-
 | Missile Launcher⁴⁶ | 1500 | 6d6 | No | 20 | 10 kg | Physical (Piercing 10) | Medium | Military |
-
 | Heavy Rifle, Blaster | 2000 | 3d10 | 2d10 | 20 | 6 kg | Energy, 10 Ammo | Long | Military |
-
 | **Huge (Anti-personal)** | | | | | | | | |
-
 | Cannon, Blaster¹ | 4000 | 3d12 | 2d12 | 20 | 18 kg | Energy, 5 Ammo | Extreme | Military |
-
 | **Accessories** | | | | | | | | |
-
 | Increased Radius | +50% | --- | --- | --- | 0.5 kg | +1 AOE | --- | --- |
-
 | Remote Detonation | +300 | --- | --- | --- | 0.5 kg | --- | --- | +1 |
-
 | **Grenades (Tiny)** | | | | | | | | |
-
 | Adhesive Grenade | 200 | --- | No | --- | 0.5 kg | Restraining, 3 AOE | Close | Licensed |
-
 | CryoBan Grenade | 500 | 3d6 | No | 20 | 0.5 kg | Restraining, 3 AOE | Close | Restricted |
-
 | Frag Grenade | 200 | 4d6 | No | 20 | 0.5 kg | Physical, 1 Delay, 3 AOE | Close | Illegal |
-
 | Ion Grenade | 250 | 4d6 | No | 20 | 0.5 kg | Ion, 1 Delay, 3 AOE | Close | Restricted |
-
 | Plasma Grenade | 250 | 4d6 | No | 20 | 0.5 kg | Energy, 1 Delay, 3 AOE | Close | Military |
-
 | Smoke Grenade | 100 | --- | --- | --- | 0.5 kg | Concealment, 3 AOE | Close | Licensed |
-
 | Stun Grenade | 300 | No | 4d6 | 20 | 0.5 kg | Energy, 3 AOE | Close | Restricted |
-
 | Thermal Detonator | 2000 | 8d6 | No | 20 | 1 kg | Energy, 1 Delay, 5 AOE | Close | Illegal |
 
 ## Armor
@@ -6813,65 +5167,35 @@ A character with Dexterity 18 normally gains **+4** to Reflex Defense from Dexte
 ### Table of Armor and Gear
 
 | ARMOR / ITEM | COST | DT / DAMAGE REDUCTION | SECONDARY DAMAGE REDUCTION | MAX DEX BONUS | ADDITIONAL QUALITIES | WEIGHT | AVAILABILITY |
-
-|-------------------------|---------------|-----------------------|----------------------------|---------------|------------------------------------------------|--------|---------------------|
-
+|---|---|---|---|---|---|---|---|
 | **Accessories** | | | | | | | |
-
 | Helmet Package¹ | 4000 | - | - | - | +2 Perception, Built in Comlink | 1 kg | Licensed |
-
 | Bandolier¹ | 100 | - | - | - | Load 6kg | 2 kg | - |
-
 | Powered Armor² | +50% | - | - | - | +1 slot | +1 kg | +1 |
-
 | **Upgrades** | | | | | | | |
-
 | Armor Reinforcement | 3000, 1 slot | - | - | - | Check Wiki | - | - |
-
 | Mesh Underlay | 2500, 2 slots | - | - | - | Check Wiki | - | - |
-
 | **Light (Head Gear)** | | | | | | | |
-
 | Blast Helmet | 100 | +1 | - | - | - | 1 kg | - |
-
 | Breath Mask¹ | - | - | - | - | 1 LS | 2 kg | - |
-
 | Plasteel Helmet | 1500 | +2 | - | - | - | 2 kg | Military |
-
 | **Light (Armor)** | | | | | | | |
-
 | Thinsuit¹ | 900 | - | - | +4 | +1 Fort, +5 Temperature Resist, 1 LS | 1 kg | - |
-
 | Flight Suit | 2000 | - | - | +5 | +2 Fort, 12 LS | 5 kg | - |
-
 | Blast Vest | 400 | 2 energy | - | +5 | - | 3 kg | - |
-
 | Fiber Armor | 1500 | 2 energy | - | +5 | - | 8 kg | Licensed |
-
 | Light Battle Armor | 3500 | 3 energy | 1 Physical | +5 | 1 slot | 10 kg | Military |
-
 | Light Beskar’gam | 35000 | 4 energy (Kyber) | 2 Physical | +5 | 2 slot | 10 kg | Licensed, Rare |
-
 | **Medium Armor** | | | | | | | |
-
 | Pressure Suit¹ | 5000 | - | - | +2 | +3 Fort, 24 LS, 5 Speed | 30 kg | - |
-
 | Flight Suit, Armored | 4000 | 5 Energy | - | +4 | +2 Fort, 12 LS, 5 Speed | 10 kg | Licensed |
-
 | Mesh Armor | 3000 | 5 Energy | - | +4 | 1 slot, 5 Speed | 8 kg | Licensed |
-
 | Battle Armor | 7000 | 7 Energy | 2 Physical | +3 | 1 slot, 5 Speed | 16 kg | Military |
-
 | Medium Beskar’gam | 70000 | 10 Energy (Kyber) | 5 Physical | +3 | 2 slot, 5 Speed | 17 kg | Restricted, Rare |
-
 | **Heavy Armor** | | | | | | | |
-
 | Pressure Suit, Armored | 12000 | 5 Energy | +3 | +0 | +3 Fort, 48 LS, 4 Speed | 35 kg | Restricted |
-
 | Matrix Armor | 10000 | 10 Energy | - | +2 | 1 slot, 4 Speed | 8 kg | Restricted |
-
 | Heavy Battle Armor | 15000 | 12 Energy | 5 Physical | +0 | 1 slot, 4 Speed | 30 kg | Military |
-
 | Heavy Beskar’gam | 150000 | 20 Energy (Kyber) | 10 Physical | +0 | 2 slot, 4 Speed | 32 kg | Restricted, Rare |
 
 #### Notes
@@ -6965,19 +5289,12 @@ Personal Energy Shields give a character a **Shield Rating (SR)**, which functio
 #### Shield Rating Costs
 
 | Shield Rating | Cost|
-
 | --- | --- |
-
 | 5 | $500|
-
 | 10| $2,000 |
-
 | 15| $4,500 |
-
 | 20| $8,000 |
-
 | 25| $12,500 |
-
 | 30| $18,000 |
 
 **Force Shields cost twice as much**
@@ -7155,21 +5472,13 @@ Influence metabolic processes—heal wounds, cure ailments, or afflict enemies.
 # Force Effect Guide
 
 | Force Point Cost | Damage by Range | Force Bonus | Alchemy Example | Augmentation Example | Cognition Example |
-
-|-----------------|----------------|------------|----------------|--------------------|-----------------|
-
+|---|---|---|---|---|---|
 | 1 | 2d6 Close | +2 | Heat a tiny derasteel object to melting point, or a medium flammable object to combustion | Reduce incoming damage by the Force effect, multiply move speed by 1.5 or jump by 3 | Make something unreasonable seem reasonable; cannot obviously threaten harm. Target can make Will defense roll vs your Force attack |
-
 | 2 | 4d6 Close, 2d6 Short | +4 | As 1 except, small derasteel or large flammable | As 1 except multiply MS by 2 or jump by 6 | As 1 except can threaten harm to their allies |
-
 | 3 | 6d6 Close, 4d6 Short, 6d6 Medium | +6 | As 2 except, medium derasteel or huge flammable | As 2 except multiply MS by 3 or jump by 9 | As 2 except can threaten harm to target |
-
 | 4 | 8d6 Close, 6d6 Short, 4d6 Medium, 2d6 Long | +8 | As 3 except, large derasteel or gargantuan flammable | As 3 except multiply MS by 4 or jump by 12 | As 3 except can directly harm target and their allies |
-
 | 5 | 5d6×2 Close, 8d6 Short, 6d6 Medium, 4d6 Long, 2d6 Extreme | +10 | As 4 except, huge derasteel or colossal flammable | As 4 except multiply MS by 5 or jump by 15 | As 4 except can kill their allies |
-
 | 6 | 6d6×2 Close, etc. | +12 | As 5 except, gargantuan derasteel or colossal+ flammable | As 5 except multiply MS by 6 or jump by 18 | As 5 except can kill target |
-
 | 7 | 7d6×2 Close, etc. | +14 | As 6 except, colossal derasteel or colossal++ flammable | As 6 except multiply MS by 7 or jump by 21 | As 6 except can kill their loved ones |
 
 _Etc._
@@ -7181,21 +5490,13 @@ _Etc._
 _The examples on this table are rough guides to the severity of effects. Players are encouraged to invent unique uses for the Force schools._
 
 | Force Point Cost | Sorcery Example | Technokinesis Example | Telekinesis Example | Vitalism Example |
-
-|-----------------|----------------|--------------------|-------------------|----------------|
-
+|---|---|---|---|---|
 | 1 | Cause someone's use of the Force to slightly alter, e.g., make a push slightly further | As Cognition except on computers; control the circuitry of a tiny object | Move a medium object 6 spaces | Cure or cause an illness of CR 1–3 |
-
 | 2 | As 1 except greater; double the push | As 1 except control circuitry of a small object | Move a large object 6 spaces | As 1 except CR 1–6 |
-
 | 3 | As 2 except greater; reverse the direction | As 2 except control circuitry of a medium object | Move a huge object 6 spaces | As 2 except CR 1–9 |
-
 | 4 | As 3 except greater; reverse and double | As 3 except control circuitry of a large object | Move a gargantuan object 6 spaces | As 3 except CR 1–12 |
-
 | 5 | As 4 except greater; push twice as many targets | As 4 except control circuitry of a huge object | Move a colossal object 6 spaces | As 4 except CR 1–15 |
-
 | 6 | As 5 except greater; push three times as many targets | As 5 except control circuitry of a gargantuan object | Move a colossal+ object 6 spaces | As 5 except CR 1–18 |
-
 | 7 | As 6 except greater; push four times as many targets | As 6 except control circuitry of a colossal object | Move a colossal++ object 6 spaces | As 6 except CR 1–21 |
 
 _Etc._
