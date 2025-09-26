@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Markdown Viewer</title>
   <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
-  <link id="theme-stylesheet" rel="stylesheet" href="dark.css">
   <link id="theme-stylesheet" rel="stylesheet" href="normal.css">
 </head>
 <body>
@@ -45,34 +44,32 @@
   
   <script>
     const toggle = document.getElementById('theme-toggle');
-    const themeLink = document.getElementById('theme-stylesheet');
     const body = document.body;
-    
+  
     // Check saved preference
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
-      themeLink.href = savedTheme === 'light' ? 'light.css' : 'dark.css';
+      body.classList.add(savedTheme);
       toggle.checked = savedTheme === 'light';
     } else {
-      themeLink.href = 'dark.css'; // default
+      body.classList.add('dark'); // default
+      localStorage.setItem('theme', 'dark');
     }
-    
-    // Smooth fade function
-    function fadeTheme(newHref) {
-      themeLink.href = newHref;
-    }
-    
+  
     // Toggle listener
     toggle.addEventListener('change', () => {
       if (toggle.checked) {
-        fadeTheme('light.css');
+        body.classList.remove('dark');
+        body.classList.add('light');
         localStorage.setItem('theme', 'light');
       } else {
-        fadeTheme('dark.css');
+        body.classList.remove('light');
+        body.classList.add('dark');
         localStorage.setItem('theme', 'dark');
       }
     });
   </script>
+
 
   
 </body>
