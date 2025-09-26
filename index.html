@@ -30,12 +30,19 @@
           simplifiedAutoLink: true,
           simpleLineBreaks: true,
           tasklists: true,
-          smoothLivePreview: true,
           strikethrough: true,
           emoji: true
         });
-        const html = converter.makeHtml(markdownText);
-        document.getElementById('content').innerHTML = html;
+        let html = converter.makeHtml(markdownText);
+
+        const idCounts = {};
+        html = html.replace(/<h([1-6]) id="([^"]+)">/g, (match, level, id) => {
+          if (!idCounts[id]) idCounts[id] = 0;
+          idCounts[id]++;
+          const newId = idCounts[id] === 1 ? id : `${id}-${idCounts[id]}`;
+          return `<h${level} id="${newId}">`;
+        });
+        
         document.getElementById('content').innerHTML = html;
         setTimeout(() => {
         document.querySelectorAll('#content img').forEach(img => {
