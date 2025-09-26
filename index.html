@@ -36,6 +36,7 @@
         });
         const html = converter.makeHtml(markdownText);
         document.getElementById('content').innerHTML = html;
+        postImageProcess();
       })
       .catch(err => {
         document.getElementById('content').innerHTML = `<p style="color:red;">${err.message}</p>`;
@@ -77,7 +78,7 @@
     });
   </script>
   <script>
-  window.onload = () => {
+  function postImageProcess () {
     const threshold = 225;
     const fadeWidth = 3;
   
