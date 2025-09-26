@@ -24,9 +24,9 @@
         return response.text();
       })
       .then(markdownText => {
-        const converter = new showdown.Converter(
+        const converter = new showdown.Converter({
           ghCompatibleHeaderId: true
-        );
+        });
         const html = converter.makeHtml(markdownText);
         document.getElementById('content').innerHTML = html;
       })
@@ -36,7 +36,7 @@
   </script>
 
   
-  <div style="position: fixed; bottom: 10px; left: 10px;">
+  <div style="position: fixed; bottom: 10px; right: 10px;">
     <label>
       <input type="checkbox" id="theme-toggle">
       Dark Mode
