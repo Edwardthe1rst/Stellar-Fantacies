@@ -2,29 +2,21 @@
 body {
   background-color: #1e1e1e;
   color: #e0e0e0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
 }
 
 /* Container for Markdown content */
 #content {
   background-color: #2a2a2a;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   color: #ffffff;
-  margin-top: 1.2em;
-  margin-bottom: 0.6em;
 }
 
 /* Links */
 a {
   color: #1e90ff;
-  text-decoration: underline;
 }
 
 a:hover {
@@ -35,9 +27,6 @@ a:hover {
 pre, code {
   background-color: #333333;
   color: #f8f8f2;
-  padding: 0.2rem 0.4rem;
-  border-radius: 4px;
-  font-family: "Courier New", Courier, monospace;
 }
 
 /* Blockquotes */
@@ -48,39 +37,14 @@ blockquote {
   margin-left: 0;
 }
 
-/* Lists */
-ul, ol {
-  margin-left: 1.5rem;
-}
-
-/* Tables */
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin-bottom: 1rem;
-}
-
 th, td {
-  border: 1px solid #555555;
-  padding: 0.5rem;
-  text-align: left;
+  border: solid #555555;
 }
 
 th {
   background-color: #3a3a3a;
 }
-
-/* Images */
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 4px;
-}
-
 /* Horizontal rules */
 hr {
-  border: 0;
-  height: 1px;
   background-color: #555555;
-  margin: 2rem 0;
 }
