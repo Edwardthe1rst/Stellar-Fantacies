@@ -1,6 +1,7 @@
 /* Base body style */
 body {
   font-family: 'Orbitron', 'Exo 2', Arial, sans-serif; /* futuristic angled font */
+  transition: 'background-color 0.5s ease, color 0.5s ease';
   line-height: 1.6;
   margin: 0;
   padding: 2rem;
@@ -75,7 +76,7 @@ img {
 #theme-toggle-container {
   position: fixed;
   bottom: 10px;
-  left: 10px;
+  right: 10px;
   width: 60px;
   height: 30px;
   background-color: rgba(0, 255, 255, 0.2);
@@ -84,7 +85,6 @@ img {
   align-items: center;
   padding: 3px;
   cursor: pointer;
-  transition: background-color 0.5s ease;
 }
 
 /* Invisible but clickable checkbox */
@@ -108,7 +108,7 @@ img {
 
 /* When checked, move the slider to the right */
 #theme-toggle:checked + #theme-toggle-slider {
-  transform: translateX(30px);
+  transform: translateX(-30px);
   background-color: #ffdd00; /* or another color for light mode */
 }
 
