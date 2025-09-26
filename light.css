@@ -4,6 +4,14 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  
+}
+
+#content {
+  background-color: #c2b4a8;
+}
+
+h1, h2, h3, h4, h5, h6 {
   color: #3B2A22;
 }
 
@@ -16,10 +24,10 @@ a:hover {
 }
 
 th, td {
-  border: solid #9E7A5D;
-  background-color: #C09C7D;
+  border: solid #584D43;
+  background-color: #9F9287;
 }
 
 th {
-  background-color: #D0A076;
+  background-color: #c2b4a8;
 }
