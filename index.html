@@ -39,8 +39,7 @@
           strikethrough: true,
           emoji: true
         });
-        const html = converter.makeHtml(markdownText);
-        html = listsToDropdowns(html);
+        const html = listsToDropdowns(converter.makeHtml(markdownText));
         document.getElementById('content').innerHTML = container.innerHTML;
       })
       .catch(err => {
