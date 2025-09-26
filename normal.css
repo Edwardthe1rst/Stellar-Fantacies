@@ -1,21 +1,20 @@
-/* Base body style */
+* {
+    border-radius: 6px;
+}
+
 body {
   font-family: 'Orbitron', 'Exo 2', Arial, sans-serif; /* futuristic angled font */
-  transition: 'background-color 0.5s ease, color 0.5s ease';
+  transition: 'background-color 0.5s ease, color 0.5s ease, transform 0.5s ease';
   line-height: 1.6;
   margin: 0;
   padding: 2rem;
 }
 
-/* Content container */
 #content {
   padding: 2rem;
   border-radius: 8px;
-  background-color: rgba(0,0,0,0.2); /* subtle overlay to separate from bg */
-  box-shadow: 0 0 20px rgba(0,255,255,0.1); /* soft tech glow */
 }
 
-/* Headings with dark boxes and angled style */
 h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   padding: 0.5rem 1rem;
@@ -26,18 +25,9 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.5px;
 }
 
-/* Links styled to look techy */
 a {
   text-decoration: none;
   transition: all 0.2s ease;
-}
-
-/* Blockquotes futuristic look */
-blockquote {
-  padding-left: 1rem;
-  font-style: italic;
-  margin-left: 0;
-  border-radius: 4px;
 }
 
 /* Code blocks */
@@ -50,36 +40,27 @@ pre, code {
 /* Tables */
 table {
   border-collapse: collapse;
-  width: 100%;
-  margin-bottom: 1rem;
 }
 
 th, td {
   padding: 0.5rem;
 }
 
-/* Horizontal rules */
-hr {
-  height: 2px;
-  border: none;
-  margin: 2rem 0;
-}
-
 /* Images */
 img {
   max-width: 100%;
   height: auto;
-  border-radius: 4px;
 }
 
 /* Toggle container */
 #theme-toggle-container {
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  bottom: 20px;
+  right: 60px;
   width: 60px;
   height: 30px;
-  background-color: rgba(0, 255, 255, 0.2);
+  background-color: #F3E2D2;
+  border-color: #3B2A22;
   border-radius: 6px;
   display: flex;
   align-items: center;
@@ -87,7 +68,6 @@ img {
   cursor: pointer;
 }
 
-/* Invisible but clickable checkbox */
 #theme-toggle {
   position: absolute;
   width: 60px;
@@ -97,18 +77,14 @@ img {
   cursor: pointer;
   z-index: 2;
 }
-/* The square slider */
+
 #theme-toggle-slider {
   width: 24px;
   height: 24px;
-  background-color: #00ffff;
   border-radius: 4px;
-  transition: transform 0.5s ease, background-color 0.5s ease;
+  background-color: #3B2A22;
 }
 
-/* When checked, move the slider to the right */
 #theme-toggle:checked + #theme-toggle-slider {
-  transform: translateX(-30px);
-  background-color: #ffdd00; /* or another color for light mode */
+  transform: translateX(30px);
 }
-
