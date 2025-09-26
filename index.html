@@ -59,13 +59,7 @@
     
     // Smooth fade function
     function fadeTheme(newHref) {
-      body.style.transition = 'background-color 0.5s ease, color 0.5s ease';
-      body.style.opacity = '0';
-      
-      setTimeout(() => {
-        themeLink.href = newHref;
-        body.style.opacity = '1';
-      }, 250); // fade out for 0.25s, then change theme
+      themeLink.href = newHref;
     }
     
     // Toggle listener
