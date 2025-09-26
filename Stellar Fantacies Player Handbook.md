@@ -424,31 +424,31 @@
 
     - [Species Traits](#species-traits-5)
 
-- [Kaminoan](#kaminoan)
+  - [Kaminoan](#kaminoan)
 
-  - [Description](#description-14)
+    - [Description](#description-14)
 
-  - [Economy](#economy)
+    - [Economy](#economy)
 
-  - [Personality](#personality-15)
+    - [Personality](#personality-15)
 
-  - [Physical Description](#physical-description-14)
+    - [Physical Description](#physical-description-14)
 
-  - [Average Height/Weight](#average-heightweight-10)
+    - [Average Height/Weight](#average-heightweight-10)
 
-  - [Age Groups](#age-groups-15)
+    - [Age Groups](#age-groups-15)
 
-  - [Homeworld](#homeworld-13)
+    - [Homeworld](#homeworld-13)
 
-  - [Languages](#languages-12)
+    - [Languages](#languages-12)
 
-  - [Example Names](#example-names-15)
+    - [Example Names](#example-names-15)
 
-  - [Adventurers](#adventurers-14)
+    - [Adventurers](#adventurers-14)
 
-  - [Kaminoan Species Traits](#kaminoan-species-traits)
+    - [Kaminoan Species Traits](#kaminoan-species-traits)
 
-  - [Automatic Languages](#automatic-languages-12)
+    - [Automatic Languages](#automatic-languages-12)
 
   - [Kel Dor](#kel-dor)
 
@@ -3068,7 +3068,7 @@ A Kaleesh with Survival as a Trained Skill gains Skill Focus (Survival) as a bon
 
 - **Penalties**: Kaleesh suffer a -2 penalty to both their Dexterity and Intelligence scores.
 
-# Kaminoan
+## Kaminoan
 
 **Reference Book: Star Wars Saga Edition Clone Wars Campaign Guide**
 
