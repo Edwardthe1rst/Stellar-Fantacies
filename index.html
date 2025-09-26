@@ -25,7 +25,7 @@
       })
       .then(markdownText => {
         const converter = new showdown.Converter({
-          ghCompatibleHeaderId: true
+          ghCompatibleHeaderId: true,
           tables: true
         });
         const html = converter.makeHtml(markdownText);
