@@ -115,6 +115,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 4px;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
+  width: 100%;
   font-family: 'Orbitron', 'Exo 2', Arial, sans-serif;
   letter-spacing: 0.5px;
 }
