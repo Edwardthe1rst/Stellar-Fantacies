@@ -12,12 +12,16 @@ body {
 #content {
   padding: 2rem;
   border-radius: 8px;
+  background-color: inherit; /* inherit from light/dark theme */
+  color: inherit;
   background-color: rgba(0,0,0,0.2); /* subtle overlay to separate from bg */
   box-shadow: 0 0 20px rgba(0,255,255,0.1); /* soft tech glow */
 }
 
 /* Headings with dark boxes and angled style */
 h1, h2, h3, h4, h5, h6 {
+  background-color: inherit; /* inherit from light/dark theme */
+  color: inherit;
   display: inline-block;
   padding: 0.5rem 1rem;
   border-radius: 4px;
@@ -29,12 +33,16 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Links styled to look techy */
 a {
+  background-color: inherit; /* inherit from light/dark theme */
+  color: inherit;
   text-decoration: none;
   transition: all 0.2s ease;
 }
 
 /* Blockquotes futuristic look */
 blockquote {
+  background-color: inherit; /* inherit from light/dark theme */
+  color: inherit;
   padding-left: 1rem;
   font-style: italic;
   margin-left: 0;
@@ -43,6 +51,8 @@ blockquote {
 
 /* Code blocks */
 pre, code {
+  background-color: inherit; /* inherit from light/dark theme */
+  color: inherit;
   padding: 0.2rem 0.4rem;
   border-radius: 4px;
   font-family: 'Courier New', Courier, monospace;
@@ -50,17 +60,23 @@ pre, code {
 
 /* Tables */
 table {
+  background-color: inherit; /* inherit from light/dark theme */
+  color: inherit;
   border-collapse: collapse;
   width: 100%;
   margin-bottom: 1rem;
 }
 
 th, td {
+  background-color: inherit; /* inherit from light/dark theme */
+  color: inherit;
   padding: 0.5rem;
 }
 
 /* Horizontal rules */
 hr {
+  background-color: inherit; /* inherit from light/dark theme */
+  color: inherit;
   height: 2px;
   border: none;
   margin: 2rem 0;
@@ -68,6 +84,8 @@ hr {
 
 /* Images */
 img {
+  background-color: inherit; /* inherit from light/dark theme */
+  color: inherit;
   max-width: 100%;
   height: auto;
   border-radius: 4px;
