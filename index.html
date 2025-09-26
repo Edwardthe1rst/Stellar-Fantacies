@@ -16,7 +16,25 @@
     // Specify the Markdown file
     const markdownFile = 'https://edwardthe1rst.github.io/Stellar-Fantacies/Stellar%20Fantacies%20Player%20Handbook.md';
 
-    // Fetch the file and convert to HTML
+    function wrapNestedLists(element) {
+      element.querySelectorAll('li').forEach(li => {
+        const nested = li.querySelector('ul');
+        if (nested) {
+          const details = document.createElement('details');
+          const summary = document.createElement('summary');
+          // Move the text content of the <li> into <summary>
+          summary.textContent = li.firstChild.textContent;
+          details.appendChild(summary);
+          details.appendChild(nested);
+          // Remove original text node and append details
+          li.firstChild.remove();
+          li.appendChild(details);
+          // Recurse for deeper nesting
+          wrapNestedLists(nested);
+        }
+      });
+    }
+    
     fetch(markdownFile)
       .then(response => {
         if (!response.ok) throw new Error('Failed to load file');
@@ -25,10 +43,19 @@
       .then(markdownText => {
         const converter = new showdown.Converter({
           ghCompatibleHeaderId: true,
-          tables: true
+          tables: true,
+          simplifiedAutoLink: true,
+          simpleLineBreaks: true,
+          tasklists: true,
+          smoothLivePreview: true,
+          strikethrough: true,
+          emoji: true
         });
         const html = converter.makeHtml(markdownText);
-        document.getElementById('content').innerHTML = html;
+        const container = document.createElement('div');
+        container.innerHTML = html;
+        wrapNestedLists(container);
+        document.getElementById('content').innerHTML = container.innerHTML;
       })
       .catch(err => {
         document.getElementById('content').innerHTML = `<p style="color:red;">${err.message}</p>`;
