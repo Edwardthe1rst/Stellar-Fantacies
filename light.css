@@ -1,52 +1,25 @@
-/* Base background and text */
 body {
-  background-color: #f9f5ee; /* soft almond */
-  color: #3b3a36;           /* dark brown-grey text */
+  background-color: #F3E2D2;
+  color: #231D1A;
 }
 
-/* Container for Markdown content */
-#content {
-  background-color: #fff8f0; /* slightly lighter almond */
-}
-
-/* Headings */
 h1, h2, h3, h4, h5, h6 {
-  color: #2c2a26;           /* darker for contrast */
+  color: #3B2A22;
 }
 
-/* Links */
 a {
-  color: #0066cc;           /* deep blue */
+  color: #A52A2A;
 }
 
 a:hover {
-  color: #3388ff;           /* lighter blue on hover */
+  color: #671717;
 }
 
-/* Code blocks */
-pre, code {
-  background-color: #ece2d8; /* pale almond */
-  color: #3b3a36;            /* same as body text */
-}
-
-/* Blockquotes */
-blockquote {
-  border-left: 3px solid #c0b8aa; /* soft border */
-  padding-left: 1rem;
-  color: #5a534d;                 /* muted text */
-  margin-left: 0;
-}
-
-/* Table borders */
 th, td {
-  border: solid #c0b8aa; /* soft almond border */
+  border: solid #9E7A5D;
+  background-color: #C09C7D;
 }
 
 th {
-  background-color: #e4dacf; /* subtle almond header */
-}
-
-/* Horizontal rules */
-hr {
-  background-color: #c0b8aa; /* soft almond line */
+  background-color: #D0A076;
 }
