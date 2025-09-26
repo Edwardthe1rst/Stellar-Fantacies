@@ -40,7 +40,7 @@
           emoji: true
         });
         const html = listsToDropdowns(converter.makeHtml(markdownText));
-        document.getElementById('content').innerHTML = container.innerHTML;
+        document.getElementById('content').innerHTML = html;
       })
       .catch(err => {
         document.getElementById('content').innerHTML = `<p style="color:red;">${err.message}</p>`;
