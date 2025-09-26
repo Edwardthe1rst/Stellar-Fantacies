@@ -1,0 +1,92 @@
+/* Base body style */
+body {
+  font-family: 'Orbitron', 'Exo 2', Arial, sans-serif; /* futuristic angled font */
+  background-color: inherit; /* inherit from light/dark theme */
+  color: inherit;
+  line-height: 1.6;
+  margin: 0;
+  padding: 2rem;
+}
+
+/* Content container */
+#content {
+  padding: 2rem;
+  border-radius: 8px;
+  background-color: rgba(0,0,0,0.2); /* subtle overlay to separate from bg */
+  box-shadow: 0 0 20px rgba(0,255,255,0.1); /* soft tech glow */
+}
+
+/* Headings with dark boxes and angled style */
+h1, h2, h3, h4, h5, h6 {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background-color: rgba(0,0,0,0.5); /* header boxes */
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Orbitron', 'Exo 2', Arial, sans-serif;
+  letter-spacing: 0.5px;
+}
+
+/* Links styled to look techy */
+a {
+  color: #00ffff;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: #00ffcc;
+  text-shadow: 0 0 5px #00ffff;
+}
+
+/* Blockquotes futuristic look */
+blockquote {
+  border-left: 4px solid #00ffff;
+  padding-left: 1rem;
+  color: #b0ffff;
+  font-style: italic;
+  margin-left: 0;
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 4px;
+}
+
+/* Code blocks */
+pre, code {
+  background-color: rgba(0,0,0,0.4);
+  color: #00ffff;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+th, td {
+  border: 1px solid rgba(0,255,255,0.3);
+  padding: 0.5rem;
+}
+
+th {
+  background-color: rgba(0,0,0,0.5);
+}
+
+/* Horizontal rules */
+hr {
+  height: 2px;
+  background-color: rgba(0,255,255,0.3);
+  border: none;
+  margin: 2rem 0;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
