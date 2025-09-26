@@ -1,3 +1,7 @@
+* {
+   transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+}
+
 body.light {
   background-color: #F3E2D2;
   color: #231D1A;
@@ -94,8 +98,7 @@ body.dark #theme-toggle-slider {
 }
 
 body {
-  font-family: 'Orbitron', 'Exo 2', Arial, sans-serif; /* futuristic angled font */
-  transition: 'background-color 0.5s ease, color 0.5s ease, transform 0.5s ease';
+  font-family: 'Teko', 'Exo 2', Arial, sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 2rem;
