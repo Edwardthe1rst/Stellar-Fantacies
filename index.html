@@ -37,30 +37,44 @@
   </script>
 
   
-  <div style="position: fixed; bottom: 10px; right: 10px;">
-    <label>
-      <input type="checkbox" id="theme-toggle">
-    </label>
+  <div id="theme-toggle-container">
+    <input type="checkbox" id="theme-toggle" style="display:none;">
+    <div id="theme-toggle-slider"></div>
   </div>
 
   
   <script>
     const toggle = document.getElementById('theme-toggle');
     const themeLink = document.getElementById('theme-stylesheet');
-  
-    // Check for saved preference
+    const body = document.body;
+    
+    // Check saved preference
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
       themeLink.href = savedTheme === 'light' ? 'light.css' : 'dark.css';
       toggle.checked = savedTheme === 'light';
+    } else {
+      themeLink.href = 'dark.css'; // default
     }
-  
+    
+    // Smooth fade function
+    function fadeTheme(newHref) {
+      body.style.transition = 'background-color 0.5s ease, color 0.5s ease';
+      body.style.opacity = '0';
+      
+      setTimeout(() => {
+        themeLink.href = newHref;
+        body.style.opacity = '1';
+      }, 250); // fade out for 0.25s, then change theme
+    }
+    
+    // Toggle listener
     toggle.addEventListener('change', () => {
       if (toggle.checked) {
-        themeLink.href = 'light.css';
+        fadeTheme('light.css');
         localStorage.setItem('theme', 'light');
       } else {
-        themeLink.href = 'dark.css';
+        fadeTheme('dark.css');
         localStorage.setItem('theme', 'dark');
       }
     });
