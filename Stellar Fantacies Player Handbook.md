@@ -1,6 +1,6 @@
 # Stellar Fantasies: Handbook + Legends Content
 
-**Bear Totem Press**
+**By Bear Totem Press**
 ![bear_totem_press.jpg](https://edwardthe1rst.github.io/Stellar-Fantacies/img/bear_totem_press.jpg)
 
 ### Content is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast.
@@ -428,63 +428,7 @@ Near-Humans speak, read, and write Basic. They often learn other languages as we
 
 ### Example Names
 
-Anakin,
-
-Arani,
-
-Bail,
-
-Ben,
-
-Biggs,
-
-Boba,
-
-Corran,
-
-Dack,
-
-Dané,
-
-Galak,
-
-Garm,
-
-Han,
-
-Jango,
-
-Jodo,
-
-Lando,
-
-Leia,
-
-Luke,
-
-Mace,
-
-Mara,
-
-Obi-Wan,
-
-Owen,
-
-Padmé,
-
-Qui-Gon,
-
-Sia-Lan,
-
-Rann,
-
-Talon,
-
-Vor'en,
-
-Wedge,
-
-Winter
+Anakin, Arani, Bail, Ben, Biggs, Boba, Corran, Dack, Dané, Galak, Garm, Han, Jango, Jodo, Lando, Leia, Luke, Mace, Mara, Obi-Wan, Owen, Padmé, Qui-Gon, Sia-Lan, Rann, Talon, Vor'en, Wedge, Winter
 
 ### Adventurers
 
@@ -619,21 +563,7 @@ Bith speak and read Bith. Those who leave the confines of their cities learn Bas
 
 ### Example Names
 
-Doikk,
-
-Figrin,
-
-Jinkins,
-
-Lirin,
-
-Nalan,
-
-Tech,
-
-Tedn,
-
-Thai
+Doikk, Figrin, Jinkins, Lirin, Nalan, Tech, Tedn, Thai
 
 ### Adventurers
 
@@ -714,17 +644,7 @@ Bothans speak, read, and write both Bothese and Basic.
 
 ### Example Names
 
-Borsk Fey'lya,
-
-Karka Kre'fey,
-
-Koth Melan,
-
-Tav Breil'lya,
-
-Tereb Ab'lon,
-
-### Adventurers
+Borsk Fey'lya, Karka Kre'fey, Koth Melan, Tav Breil'lya, Tereb Ab'lon, ### Adventurers
 
 Bothan adventurers, often SpyNet operatives, engage in daring missions at great personal risk. In addition, many Bothan heroes serve as Soldiers, Scoundrels, and Nobles. Their curiosity leads some to be explorers and Scouts.
 
@@ -898,19 +818,7 @@ All Clawdites can speak, read, and write both Basic and Clawdite.
 
 ### Example Names
 
-Durbat,
-
-Renneyn,
-
-Rolsat,
-
-Noviee,
-
-Torsayn,
-
-Zam Wesell,
-
-### Adventurers
+Durbat, Renneyn, Rolsat, Noviee, Torsayn, Zam Wesell, ### Adventurers
 
 Clawdites who leave Zolan find work as bounty hunters, assassins, or spies. Their unique nature makes them especially adept Scoundrels or Scouts
 
@@ -1269,21 +1177,7 @@ The Falleen speak their native language of Falleen. Most also tend to learn Basi
 
 ### Example Names
 
-Savan,
-
-Xad,
-
-Xist,
-
-Xizor,
-
-Xora,
-
-Zule,
-
-Zurros,
-
-### Adventurers
+Savan, Xad, Xist, Xizor, Xora, Zule, Zurros, ### Adventurers
 
 Falleen adventurers are privileged youth, the scions of the wealthy and powerful. It is customary on Falleen for Young adults to embark on pilgrimages into the galaxy to explore and learn about other cultures. During this time, the Falleen pilgrims are expected to engage with other cultures, finding their failures and successes. When the Falleen comes of age and claims their place at the head of their people, they can use their experiences to better rule their subjects.
 
@@ -1354,21 +1248,7 @@ Gungans speak, read, and write both Gunganese and Basic.
 
 ### Example Names
 
-Fassa,
-
-Jar Jar,
-
-Rugor,
-
-Tarpals,
-
-Toba,
-
-Tobler Ceel,
-
-Yoss,
-
-### Adventurers
+Fassa, Jar Jar, Rugor, Tarpals, Toba, Tobler Ceel, Yoss, ### Adventurers
 
 Many Gungans leave their underwater cities to explore as Scouts. Since the treaty with the Humans of Naboo, some Gungans—perhaps driven by an impulse to regain the warrior spirit of old as Soldiers—have taken a larger step into galactic society.
 
@@ -1437,41 +1317,7 @@ Hutts speak, read, and write both Basic and Huttese. However, they consider thei
 
 ### Example Names
 
-Borga,
-
-Churabba,
-
-Dalla,
-
-Durga,
-
-Gardulla,
-
-Grelb,
-
-Grondo,
-
-Issulla,
-
-Jabba,
-
-Krova,
-
-Mardoc,
-
-Mika,
-
-Nullada,
-
-Popara,
-
-Shala,
-
-Yarella,
-
-Zonnos,
-
-Zordo
+Borga, Churabba, Dalla, Durga, Gardulla, Grelb, Grondo, Issulla, Jabba, Krova, Mardoc, Mika, Nullada, Popara, Shala, Yarella, Zonnos, Zordo
 
 ### Adventurers
 
@@ -1965,17 +1811,7 @@ Nautolans speak their native language of Nautila, an underwater language reliant
 
 ### Example Names
 
-Hiskar Dorset,
-
-Kit Fisto,
-
-Ploss Niklos,
-
-Renko Losa,
-
-Pin Mako,
-
-Setel Yast
+Hiskar Dorset, Kit Fisto, Ploss Niklos, Renko Losa, Pin Mako, Setel Yast
 
 ### Adventurers
 
@@ -2352,21 +2188,7 @@ Twi'leks speak, read, and write Ryl and Basic. They can also communicate with on
 
 ### Example Names
 
-Bib Fortuna,
-
-Deel Surool,
-
-Firith Olan,
-
-Koyi Komad,
-
-Lyn Me,
-
-Oola,
-
-Tott Doneeta,
-
-### Adventurers
+Bib Fortuna, Deel Surool, Firith Olan, Koyi Komad, Lyn Me, Oola, Tott Doneeta, ### Adventurers
 
 Twi'lek adventurers generally prefer to work behind the scenes as Scoundrels, letting others stand in the full light of day. Many wind up in businesses (whether legal or illegal), performing as entertainers, or even serving as diplomats as Nobles.
 
@@ -2429,21 +2251,7 @@ Wookiees speak Shyriiwook, consisting of complex grunts and growls. They underst
 
 ### Example Names
 
-Chewbacca,
-
-Gorwooken,
-
-Groznik,
-
-Lowbacca,
-
-Ralrra,
-
-Rorworr,
-
-Salporin,
-
-### Adventurers
+Chewbacca, Gorwooken, Groznik, Lowbacca, Ralrra, Rorworr, Salporin, ### Adventurers
 
 Wookiee adventurers usually start out as wanderers or explorers as Scouts, but some find this path by forming an Honor Family with (Or owning a Life Debt to) other adventurers.
 
@@ -2510,15 +2318,7 @@ Zabraks speak, read, and write both Zabrak and Basic.
 
 ### Example Names
 
-Aagh Odok,
-
-Eeth Koth,
-
-Kooth Aan,
-
-Bao Dur,
-
-### Adventurers
+Aagh Odok, Eeth Koth, Kooth Aan, Bao Dur, ### Adventurers
 
 Zabrak adventurers love to explore the galaxy. No challenge is too big to deter a Zabrak. They range from Scoundrels on distant colony worlds, to Noble diplomats and merchants, to Scouts, Soldiers, and even Jedi.
 
@@ -2633,9 +2433,7 @@ both Intelligence and Charisma.
 
 - **Ability Score Adjustment**: All fifth degree droids have a
 
-+4 to both Strength and Constitution, but a -2 to Wisdom,
-
-Intelligence, and Charisma.
++4 to both Strength and Constitution, but a -2 to Wisdom, Intelligence, and Charisma.
 
 # Character Classes
 
@@ -4050,11 +3848,7 @@ When Technician is taken as your first level, you begin with the following bonus
 
 - Skill Focus
 
-  - Knowledge (Any),
-
-  - Mechanics,
-
-  - Treat Injury, or
+  - Knowledge (Any),   - Mechanics,   - Treat Injury, or
 
   - Use Computer
 
