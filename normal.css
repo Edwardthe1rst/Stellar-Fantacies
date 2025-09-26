@@ -87,6 +87,16 @@ img {
   transition: background-color 0.5s ease;
 }
 
+/* Invisible but clickable checkbox */
+#theme-toggle {
+  position: absolute;
+  width: 60px;
+  height: 30px;
+  opacity: 0;
+  margin: 0;
+  cursor: pointer;
+  z-index: 2;
+}
 /* The square slider */
 #theme-toggle-slider {
   width: 24px;
