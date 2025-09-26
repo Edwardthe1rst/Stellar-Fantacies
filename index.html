@@ -36,13 +36,10 @@
         });
         const html = converter.makeHtml(markdownText);
         document.getElementById('content').innerHTML = html;
-        document.querySelectorAll('#content img').forEach(img => {
-          if (img.complete) {
-            postImageProcess(img);
-          } else {
-            img.onload = () => postImageProcess(img);
-          }
-        });
+        document.getElementById('content').innerHTML = html;
+        setTimeout(() => {
+          postImageProcess();
+        }, 100);
       })
       .catch(err => {
         document.getElementById('content').innerHTML = `<p style="color:red;">${err.message}</p>`;
