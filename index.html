@@ -16,12 +16,6 @@
   <script>
     // Specify the Markdown file
     const markdownFile = 'https://edwardthe1rst.github.io/Stellar-Fantacies/Stellar%20Fantacies%20Player%20Handbook.md';
-
-    function listsToDropdowns(html) {
-      // Turn any <ul> inside another <li> into a <details><summary>
-      return html.replace(/<li>(.*?)<ul>/g, '<li><details><summary>$1</summary><ul>')
-                 .replace(/<\/ul>\s*<\/li>/g, '</ul></details></li>');
-    }
     
     fetch(markdownFile)
       .then(response => {
@@ -39,7 +33,7 @@
           strikethrough: true,
           emoji: true
         });
-        const html = listsToDropdowns(converter.makeHtml(markdownText));
+        const html = converter.makeHtml(markdownText);
         document.getElementById('content').innerHTML = html;
       })
       .catch(err => {
