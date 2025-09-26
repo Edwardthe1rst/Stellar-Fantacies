@@ -1,50 +1,38 @@
-/* Base background and text */
 body {
-  background-color: #1e1e1e;
-  color: #e0e0e0;
+  background-color: #0A140E;
+  color: #818E91;
 }
 
-/* Container for Markdown content */
+
 #content {
-  background-color: #2a2a2a;
+  background-color: #08180F;
 }
 
-/* Headings */
 h1, h2, h3, h4, h5, h6 {
-  color: #ffffff;
+  color:  #818E91;
 }
 
-/* Links */
 a {
-  color: #1e90ff;
+  color: #A52A2A;
 }
 
 a:hover {
-  color: #63b3ed;
-}
-
-/* Code blocks */
-pre, code {
-  background-color: #333333;
-  color: #f8f8f2;
-}
-
-/* Blockquotes */
-blockquote {
-  border-left: 3px solid #555555;
-  padding-left: 1rem;
-  color: #cccccc;
-  margin-left: 0;
+  color: #671717;
 }
 
 th, td {
-  border: solid #555555;
+  border: solid #26513A;
+  background-color: #1C3B2A;
 }
 
 th {
-  background-color: #3a3a3a;
+  background-color: #2C4739;
 }
-/* Horizontal rules */
-hr {
-  background-color: #555555;
+
+#theme-toggle-container {
+  background-color: #818E91;
+}
+
+#theme-toggle-slider {
+  background-color: #08180F;
 }
