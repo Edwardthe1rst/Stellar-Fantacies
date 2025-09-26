@@ -10,90 +10,90 @@
 # Table of Contents
 
 - [Changes](#changes)
-  - [Changes from v00.07.03 to v00.07.05](#changes-from-v000703-to-v000705)
-  - [Changes from v00.07.05 to v00.07.06](#changes-from-v000705-to-v000706)
+    - [Changes from v00.07.03 to v00.07.05](#changes-from-v000703-to-v000705)
+    - [Changes from v00.07.05 to v00.07.06](#changes-from-v000705-to-v000706)
 - [Ability Scores](#ability-scores)
-  - [Dark Side](#dark-side)
-  - [Ability Scores](#ability-scores-2)
-  - [Willpower Checks/Saves](#willpower-checkssaves)
-  - [Wisdom](#wisdom)
-  - [Determining Ability Scores](#determining-ability-scores)
+    - [Dark Side](#dark-side)
+    - [Ability Scores](#ability-scores-2)
+    - [Willpower Checks/Saves](#willpower-checkssaves)
+    - [Wisdom](#wisdom)
+    - [Determining Ability Scores](#determining-ability-scores)
 - [Character Species](#character-species)
-  - [Near-Human](#near-human)
-  - [Bith](#bith)
-  - [Bothan](#bothan)
-  - [Cereans](#cereans)
-  - [Clawdite](#clawdite)
-  - [Codru-Ji](#codru-ji)
-  - [Devaronian](#devaronian)
-  - [Duros](#duros)
-  - [Ewok](#ewok)
-  - [Falleen](#falleen)
-  - [Gungan](#gungan)
-  - [Hutts](#hutts)
-  - [Jawa](#jawa)
-  - [Kaleesh](#kaleesh)
+    - [Near-Human](#near-human)
+    - [Bith](#bith)
+    - [Bothan](#bothan)
+    - [Cereans](#cereans)
+    - [Clawdite](#clawdite)
+    - [Codru-Ji](#codru-ji)
+    - [Devaronian](#devaronian)
+    - [Duros](#duros)
+    - [Ewok](#ewok)
+    - [Falleen](#falleen)
+    - [Gungan](#gungan)
+    - [Hutts](#hutts)
+    - [Jawa](#jawa)
+    - [Kaleesh](#kaleesh)
 - [Kaminoan](#kaminoan)
-  - [Kel Dor](#kel-dor)
-  - [Average Height/Weight](#average-heightweight)
-  - [Mon Calamari](#mon-calamari)
-  - [Nautolans](#nautolans)
-  - [Quarren](#quarren)
-  - [Rodian](#rodian)
-  - [Togruta](#togruta)
-  - [Trandoshan](#trandoshan)
-  - [Twi'lek](#twilek)
-  - [Wookiee](#wookiee)
-  - [Zabrak](#zabrak)
-  - [DROIDs](#droids)
+    - [Kel Dor](#kel-dor)
+    - [Average Height/Weight](#average-heightweight)
+    - [Mon Calamari](#mon-calamari)
+    - [Nautolans](#nautolans)
+    - [Quarren](#quarren)
+    - [Rodian](#rodian)
+    - [Togruta](#togruta)
+    - [Trandoshan](#trandoshan)
+    - [Twi'lek](#twilek)
+    - [Wookiee](#wookiee)
+    - [Zabrak](#zabrak)
+    - [DROIDs](#droids)
 - [Character Classes](#character-classes)
-  - [Heroic Level](#heroic-level)
-  - [Force Acolyte](#force-acolyte)
-  - [Noble](#noble)
-  - [Scoundrel](#scoundrel)
-  - [Scout](#scout)
-  - [Soldier](#soldier)
-  - [Technician](#technician)
-- [FEATS](#feats)
-  - [Staring Feats](#staring-feats)
-  - [Core Feats](#core-feats)
-  - [General Feats](#general-feats)
+    - [Heroic Level](#heroic-level)
+    - [Force Acolyte](#force-acolyte)
+    - [Noble](#noble)
+    - [Scoundrel](#scoundrel)
+    - [Scout](#scout)
+    - [Soldier](#soldier)
+    - [Technician](#technician)
+- [Feats](#feats)
+    - [Staring Feats](#staring-feats)
+    - [Core Feats](#core-feats)
+    - [General Feats](#general-feats)
 - [Ace Pilot Tree](#ace-pilot-tree)
 - [Force Adept Tree](#force-adept-tree)
 - [Ideologue](#ideologue)
 - [Marksman Tree](#marksman-tree)
 - [Medic Tree](#medic-tree)
 - [Melee Dualist Tree](#melee-dualist-tree)
-  - [Feats Table](#feats-table)
+    - [Feats Table](#feats-table)
 - [Skills](#skills)
 - [Defenses](#defenses)
-  - [Shield Rating](#shield-rating)
-  - [Damage Reduction](#damage-reduction)
-  - [Damage Threshold](#damage-threshold)
-  - [Poise](#poise)
-  - [Primary Defenses](#primary-defenses)
+    - [Shield Rating](#shield-rating)
+    - [Damage Reduction](#damage-reduction)
+    - [Damage Threshold](#damage-threshold)
+    - [Poise](#poise)
+    - [Primary Defenses](#primary-defenses)
 - [Equipment](#equipment)
-  - [Restricted Items](#restricted-items)
+    - [Restricted Items](#restricted-items)
 - [Combat](#combat)
-  - [Weapons](#weapons)
-  - [Armor](#armor)
+    - [Weapons](#weapons)
+    - [Armor](#armor)
 - [The Force](#the-force)
-  - [Common Views](#common-views)
-  - [Force Alignment](#force-alignment)
-  - [Force Schools](#force-schools)
-  - [Force Points](#force-points)
-  - [Force Schools](#force-schools-2)
+    - [Common Views](#common-views)
+    - [Force Alignment](#force-alignment)
+    - [Force Schools](#force-schools)
+    - [Force Points](#force-points)
+    - [Force Schools](#force-schools-2)
 - [Force Effect Guide](#force-effect-guide)
 - [Force Effect Guide – Other Schools](#force-effect-guide--other-schools)
 - [Running Stellar Fantasies: Encounters](#running-stellar-fantasies-encounters)
-  - [Character Scale](#character-scale)
-  - [Melee Combat](#melee-combat)
-  - [Firefight](#firefight)
-  - [Actions](#actions)
-  - [Melee Actions (Requires Melee Dualist)](#melee-actions-requires-melee-dualist)
-  - [Firefight Actions (Requires Marksman)](#firefight-actions-requires-marksman)
-  - [Environment and Situation](#environment-and-situation)
-  - [Conditions](#conditions)
+    - [Character Scale](#character-scale)
+    - [Melee Combat](#melee-combat)
+    - [Firefight](#firefight)
+    - [Actions](#actions)
+    - [Melee Actions (Requires Melee Dualist)](#melee-actions-requires-melee-dualist)
+    - [Firefight Actions (Requires Marksman)](#firefight-actions-requires-marksman)
+    - [Environment and Situation](#environment-and-situation)
+    - [Conditions](#conditions)
 
 # Changes
 
@@ -719,11 +719,11 @@ This ability extends even to issues surrounding The Force, and a Cerean Jedi oft
 
 - **Ability Score Adjustment**: Cereans have a bonus to Intelligence and Wisdom but suffer from poor coordination.
 
-  - **Intelligence**: +2
+    - **Intelligence**: +2
 
-  - **Wisdom**: +2
+    - **Wisdom**: +2
 
-  - **Dexterity**: -2
+    - **Dexterity**: -2
 
 - **Medium Size**: As Medium creatures, Cereans have no special bonuses or penalties due to their size.
 
@@ -958,11 +958,11 @@ Devaron, a world of low mountains and deep valleys linked by thousands of rivers
 
 - **Ability Score Adjustment**:
 
-  - Male Devaronians gain +2 Dexterity and –2 Wisdom.
+    - Male Devaronians gain +2 Dexterity and –2 Wisdom.
 
-  - Female Devaronians gain +2 Wisdom and –2 Dexterity.
+    - Female Devaronians gain +2 Wisdom and –2 Dexterity.
 
-  - Hermaphrodite Devaronians have no adjustments, but when around another Devaronian their modifiers switch to the opposite sex.
+    - Hermaphrodite Devaronians have no adjustments, but when around another Devaronian their modifiers switch to the opposite sex.
 
 - **Medium Size**: Devaronians have no special bonuses or penalties from size.
 
@@ -1896,7 +1896,7 @@ Quarren leave their homeworld to escape their dependency on the Mon Calamari. Th
 
 - **Ability Score Adjustment**: Quarren receive a +2 bonus to their Constitution, but take -2 penalties to Wisdom.
 
-  - Note: Quarren are extremely resilient and physically tough, though they tend toward deficiencies in wisdom.
+    - Note: Quarren are extremely resilient and physically tough, though they tend toward deficiencies in wisdom.
 
 - **Medium Size**: As Medium creatures, Quarren have no special bonuses or penalties due to their size.
 
@@ -3848,9 +3848,9 @@ When Technician is taken as your first level, you begin with the following bonus
 
 - Skill Focus
 
-  - Knowledge (Any),   - Mechanics,   - Treat Injury, or
+    - Knowledge (Any),   - Mechanics,   - Treat Injury, or
 
-  - Use Computer
+    - Use Computer
 
 - Tech Specialist or
 
@@ -4059,7 +4059,7 @@ You can substitute a Use Computer check for a Mechanics check when disabling a c
 
 Gain 5 skill focus points. These can be spent in any skill related to operating computers (not including mechanics). Skill focus cannot be higher than skill training in that skill.
 
-# FEATS
+# Feats
 
 **V2.3**
 
@@ -4351,9 +4351,9 @@ Gain medic actions.
 
 - Can use a repair kit instead of a medpac.
 
-  - **Cost**: 1 Force Point
+    - **Cost**: 1 Force Point
 
-  - **Effect**: Convert 1 repair kit into a medpac (free action).
+    - **Effect**: Convert 1 repair kit into a medpac (free action).
 
 **Surgical Experience**
 
@@ -4734,7 +4734,7 @@ Targets of an attack with the _Delay_ quality (including AOE effects) may use a 
 
 - If stun damage exceeds the torso’s Damage Threshold:
 
-  - Target is knocked unconscious for 1 minute, or until awakened by another creature.
+    - Target is knocked unconscious for 1 minute, or until awakened by another creature.
 
 - After waking, the target’s critical failure range is increased by 5 for the rest of the encounter.
 
@@ -4748,9 +4748,9 @@ Targets of an attack with the _Delay_ quality (including AOE effects) may use a 
 
 - **Too Large to Hold:** A weapon two or more size categories larger than you.
 
-  - Using without a mount (bi-pod, tri-pod, etc.) imposes –5 penalty.
+    - Using without a mount (bi-pod, tri-pod, etc.) imposes –5 penalty.
 
-  - Each additional size category adds another –5.
+    - Each additional size category adds another –5.
 
 #### Multiple Weapon Fighting
 
@@ -5008,19 +5008,19 @@ While wearing armor you are **not proficient** with, you take an **armor check p
 
 - Skill checks using the following skills:
 
-  - Acrobatics
+    - Acrobatics
 
-  - Climb
+    - Climb
 
-  - Endurance
+    - Endurance
 
-  - Initiative
+    - Initiative
 
-  - Jump
+    - Jump
 
-  - Stealth
+    - Stealth
 
-  - Swim
+    - Swim
 
 #### Penalty by Proficiency
 
@@ -5028,21 +5028,21 @@ The type of armor compared to your proficiency determines the penalty:
 
 - **No Armor Proficiency:**
 
-  - Light Armor: –2
+    - Light Armor: –2
 
-  - Medium Armor: –5
+    - Medium Armor: –5
 
-  - Heavy Armor: –10
+    - Heavy Armor: –10
 
 - **Light Armor Proficiency:**
 
-  - Medium Armor: –2
+    - Medium Armor: –2
 
-  - Heavy Armor: –5
+    - Heavy Armor: –5
 
 - **Medium Armor Proficiency:**
 
-  - Heavy Armor: –2
+    - Heavy Armor: –2
 
 #### Equipment Bonuses
 
@@ -5068,7 +5068,7 @@ Personal Energy Shields give a character a **Shield Rating (SR)**, which functio
 
 - **Limit:** Can only be activated **once per encounter**.
 
-  - The stress of activation would otherwise overload the generator, so failsafes prevent repeated use.
+    - The stress of activation would otherwise overload the generator, so failsafes prevent repeated use.
 
 - **Duration:** Each activation lasts until the **end of the encounter**.
 
@@ -5473,9 +5473,9 @@ If an action doesn’t fall under standard categories, the Storyteller determine
 
 - **Totally Obscured**: Cannot detect; +10 to stealth/reflex.
 
-  - **Directional Total Obscurement**: +20 reflex.
+    - **Directional Total Obscurement**: +20 reflex.
 
-  - **Omni-directional Total Obscurement**: +40 reflex.
+    - **Omni-directional Total Obscurement**: +40 reflex.
 
 ## Conditions
 
