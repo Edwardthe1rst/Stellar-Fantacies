@@ -16,23 +16,10 @@
     // Specify the Markdown file
     const markdownFile = 'https://edwardthe1rst.github.io/Stellar-Fantacies/Stellar%20Fantacies%20Player%20Handbook.md';
 
-    function wrapNestedLists(element) {
-      element.querySelectorAll('li').forEach(li => {
-        const nested = li.querySelector('ul');
-        if (nested) {
-          const details = document.createElement('details');
-          const summary = document.createElement('summary');
-          // Move the text content of the <li> into <summary>
-          summary.textContent = li.firstChild.textContent;
-          details.appendChild(summary);
-          details.appendChild(nested);
-          // Remove original text node and append details
-          li.firstChild.remove();
-          li.appendChild(details);
-          // Recurse for deeper nesting
-          wrapNestedLists(nested);
-        }
-      });
+    function listsToDropdowns(html) {
+      // Turn any <ul> inside another <li> into a <details><summary>
+      return html.replace(/<li>(.*?)<ul>/g, '<li><details><summary>$1</summary><ul>')
+                 .replace(/<\/ul>\s*<\/li>/g, '</ul></details></li>');
     }
     
     fetch(markdownFile)
@@ -52,9 +39,7 @@
           emoji: true
         });
         const html = converter.makeHtml(markdownText);
-        const container = document.createElement('div');
-        container.innerHTML = html;
-        wrapNestedLists(container);
+        html = listsToDropdowns(html);
         document.getElementById('content').innerHTML = container.innerHTML;
       })
       .catch(err => {
