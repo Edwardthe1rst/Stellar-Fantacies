@@ -33,7 +33,7 @@
     - [Hutts](#hutts)
     - [Jawa](#jawa)
     - [Kaleesh](#kaleesh)
-- [Kaminoan](#kaminoan)
+    - [Kaminoan](#kaminoan)
     - [Kel Dor](#kel-dor)
     - [Average Height/Weight](#average-heightweight)
     - [Mon Calamari](#mon-calamari)
