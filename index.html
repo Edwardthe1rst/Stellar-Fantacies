@@ -162,8 +162,8 @@
         data[i + 3] = Math.round(data[i + 3] * factor);
       }
     }
-  
     ctx.putImageData(imageData, 0, 0);
+    img.onload = null;
     img.src = canvas.toDataURL("image/png");
   }
   </script>
