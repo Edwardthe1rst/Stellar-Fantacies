@@ -45,7 +45,7 @@
     - [Twi'lek](#twilek)
     - [Wookiee](#wookiee)
     - [Zabrak](#zabrak)
-    - [DROIDs](#droids)
+    - [Droids](#droids)
 - [Character Classes](#character-classes)
     - [Heroic Level](#heroic-level)
     - [Force Acolyte](#force-acolyte)
@@ -1517,7 +1517,7 @@ A Kaleesh with Survival as a Trained Skill gains Skill Focus (Survival) as a bon
 
 - **Penalties**: Kaleesh suffer a -2 penalty to both their Dexterity and Intelligence scores.
 
-# Kaminoan
+## Kaminoan
 ![kaminoan.png](https://edwardthe1rst.github.io/Stellar-Fantacies/img/kaminoan.png)
 
 **Reference Book: Star Wars Saga Edition Clone Wars Campaign Guide**
@@ -2338,7 +2338,7 @@ Zabrak adventurers love to explore the galaxy. No challenge is too big to deter 
 
 All Zabrak can speak, read, and write both Basic and Zabrak.
 
-## DROIDs
+## Droids
 
 **v1.1**
 
