@@ -1,6 +1,8 @@
 * {
-   transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
   border-radius: 1px;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 body.light {
