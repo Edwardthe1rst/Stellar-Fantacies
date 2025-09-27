@@ -52,6 +52,7 @@
             img.onload = () => postImageProcess(img);
           }
         });
+        });
       })
       .catch(err => {
         document.getElementById('content').innerHTML = `<p style="color:red;">${err.message}</p>`;
