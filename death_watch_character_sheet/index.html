@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Deathwatch Character Sheet</title>
+<style>
+  body {
+    margin: 0;
+    background: #222;
+    padding: 40px; /* outer margin */
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 100vh;
+    box-sizing: border-box;
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0px;
+    border: 2px solid #555;
+    flex: 1;
+  }
+
+  object {
+    height: 100%;
+  }
+
+  button {
+    border-color: #555;
+    background: #444;
+    color: #888;
+    border-radius: 0px;
+    padding: 5px;
+    margin: 10px;
+  }
+
+  p {
+    color: #888;
+    font-family: sans-serif;
+    font-size: 12px;
+    margin: 10px;
+  }
+
+  .sidebar {
+    background: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .dice-roller {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dice {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.15s;
+  }
+
+  .dice:hover {
+    transform: scale(1.1);
+  }
+
+  .dice.double {
+    display: flex;
+    gap: 5px;
+    width: auto;
+    height: 50px;
+  }
+
+  .dice.double object {
+    width: 50px;
+    height: 50px;
+  }
+
+</style>
+
+</head>
+<body>
+  <div class="sidebar">
+    <div class="dice-roller">
+      <object class="dice" data="d4.svg"  data-sides="4"  type="image/svg+xml"></object>
+      <object class="dice" data="d6.svg"  data-sides="6"  type="image/svg+xml"></object>
+      <object class="dice" data="d8.svg"  data-sides="8"  type="image/svg+xml"></object>
+      <object class="dice" data="d10.svg" data-sides="10" type="image/svg+xml"></object>
+      <object class="dice" data="d12.svg" data-sides="12" type="image/svg+xml"></object>
+      <div class="dice double" data-sides="10">
+        <object data="d10.svg" type="image/svg+xml"></object>
+        <object data="d10.svg" type="image/svg+xml"></object>
+      </div>
+    </div>
+  </div>
+
+<script>
+  const diceObjects = document.querySelectorAll('.dice');
+
+  function rollDie(sides) {
+    return Math.floor(Math.random() * sides) + 1;
+  }
+
+diceObjects.forEach(d => {
+  const sides = parseInt(d.dataset.sides);
+
+  // Handle normal dice
+  if (!d.classList.contains('double')) {
+    d.addEventListener('click', roll);
+    const obj = d; // <object> itself is clickable now
+    obj.addEventListener('load', () => {
+      const svgDoc = obj.contentDocument;
+      if (svgDoc) {
+        svgDoc.addEventListener('click', roll);
+      }
+    });
+  } else {
+    // Handle the d100 (two d10 SVGs)
+    const dice = d.querySelectorAll('object');
+    dice.forEach(obj => {
+      obj.addEventListener('load', () => {
+        const svgDoc = obj.contentDocument;
+        if (svgDoc) {
+          svgDoc.addEventListener('click', roll);
+        }
+      });
+    });
+  }
+
+  function roll() {
+    if (d.classList.contains('double')) {
+      const dice = d.querySelectorAll('object');
+      const left = Math.floor(Math.random() * 10);
+      const right = Math.floor(Math.random() * 10);
+      dice.forEach((obj, i) => {
+        const num = i === 0 ? left : right;
+        const doc = obj.contentDocument;
+        if (!doc) return;
+        let overlay = doc.querySelector('#roll-overlay');
+        if (!overlay) {
+          overlay = doc.createElementNS('http://www.w3.org/2000/svg', 'text');
+          overlay.setAttribute('id', 'roll-overlay');
+          overlay.setAttribute('x', '50%');
+          let yPos = '55%';
+          overlay.setAttribute('y', yPos);
+          overlay.setAttribute('text-anchor', 'middle');
+          overlay.setAttribute('fill', 'white');
+          overlay.setAttribute('font-size', '14');
+          doc.documentElement.appendChild(overlay);
+        }
+        overlay.textContent = num;
+      });
+    } else {
+      const roll = Math.floor(Math.random() * sides) + 1;
+      const doc = d.contentDocument;
+      if (!doc) return;
+      let overlay = doc.querySelector('#roll-overlay');
+      if (!overlay) {
+        overlay = doc.createElementNS('http://www.w3.org/2000/svg', 'text');
+        overlay.setAttribute('id', 'roll-overlay');
+        overlay.setAttribute('x', '50%');
+        let yPos = '55%';
+        if (sides === 4 || sides === 6 || sides === 12) {
+        yPos = '65%';
+        }
+        overlay.setAttribute('y', yPos);
+        overlay.setAttribute('text-anchor', 'middle');
+        overlay.setAttribute('fill', 'white');
+        overlay.setAttribute('font-size', '18');
+        doc.documentElement.appendChild(overlay);
+      }
+      overlay.textContent = roll;
+    }
+  }
+});
+</script>
+  
+  <div class="content">
+    <object data="page1.svg" type="image/svg+xml"></object>
+    <object data="page2.svg" type="image/svg+xml"></object>
+  </div>
+  <div id="savebar" class="sidebar">
+    <p>Data autosaved to browser!</p>
+    <button id="clearDataBtn">Clear All Data</button>
+    <button id="backupBtn">Backup Character</button>
+    <button id="loadBackupBtn">Load Character</button>
+    <input type="file" id="backupFile" accept=".json" style="display:none;">
+  </div>
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const clearBtn = document.getElementById('clearDataBtn');
+  const backupBtn = document.getElementById('backupBtn');
+  const loadBtn = document.getElementById('loadBackupBtn');
+  const fileInput = document.getElementById('backupFile');
+
+  // ---- CLEAR ALL DATA ----
+  clearBtn.addEventListener('click', () => {
+    if (!confirm('Clear all saved character data? This cannot be undone.')) return;
+
+    Object.keys(localStorage).forEach(key => {
+      if (key.startsWith('svgInput_')) localStorage.removeItem(key);
+    });
+
+    alert('All saved data cleared.');
+    location.reload();
+  });
+
+  // ---- BACKUP CHARACTER ----
+  backupBtn.addEventListener('click', () => {
+    const data = {};
+    Object.keys(localStorage).forEach(key => {
+      if (key.startsWith('svgInput_')) {
+        data[key] = localStorage.getItem(key);
+      }
+    });
+
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'character_backup.json';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+  });
+
+  // ---- LOAD CHARACTER ----
+  loadBtn.addEventListener('click', () => fileInput.click());
+
+  fileInput.addEventListener('change', async e => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    try {
+      const text = await file.text();
+      const data = JSON.parse(text);
+      Object.entries(data).forEach(([k, v]) => {
+        if (k.startsWith('svgInput_')) localStorage.setItem(k, v);
+      });
+      alert('Backup loaded successfully!');
+      location.reload(); // refresh to apply
+    } catch (err) {
+      alert('Invalid or corrupt backup file.');
+    }
+  });
+});
+</script>
+
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Map of linked foreignObject IDs: page1 -> page2
+  const map = {
+    "fo345": "fo102",
+    "fo346": "fo101",
+    "fo347": "fo35",
+    "fo348": "fo37",
+    "fo349": "fo38",
+    "fo350": "fo39",
+    "fo351": "fo40",
+    "fo352": "fo34",
+    "fo353": "fo33",
+    "fo354": "fo7",
+    "fo355": "fo36"
+  };
+
+  const page1 = document.querySelector('object[data="page1.svg"]');
+  const page2 = document.querySelector('object[data="page2.svg"]');
+
+  function setupLinks() {
+    const doc1 = page1.contentDocument;
+    const doc2 = page2.contentDocument;
+
+    if (!doc1 || !doc2) {
+      console.warn('SVGs not yet loaded, retrying...');
+      setTimeout(setupLinks, 500);
+      return;
+    }
+
+    Object.entries(map).forEach(([id1, id2]) => {
+      const fo1 = doc1.getElementById(id1);
+      const fo2 = doc2.getElementById(id2);
+      if (!fo1 || !fo2) return;
+
+      const input1 = fo1.querySelector('input');
+      const input2 = fo2.querySelector('input');
+      if (!input1 || !input2) return;
+
+      function sync(from, to) {
+        to.value = from.value;
+      }
+
+      input1.addEventListener('input', () => sync(input1, input2));
+      input2.addEventListener('input', () => sync(input2, input1));
+    });
+
+    console.log('✅ Linked textboxes established.');
+  }
+
+  setupLinks();
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const pages = [
+    document.querySelector('object[data="page1.svg"]'),
+    document.querySelector('object[data="page2.svg"]')
+  ];
+
+  function saveInput(id, value) {
+    localStorage.setItem('svgInput_' + id, value);
+  }
+
+  function loadInput(id) {
+    return localStorage.getItem('svgInput_' + id);
+  }
+
+  function setupStorageForPage(page) {
+    const doc = page.contentDocument;
+    if (!doc) {
+      // SVG not loaded yet, try again
+      setTimeout(() => setupStorageForPage(page), 500);
+      return;
+    }
+
+    const inputs = Array.from(doc.querySelectorAll('input'));
+
+    inputs.forEach(input => {
+      const parentId = input.closest('foreignObject')?.id || input.id;
+      if (!parentId) return;
+
+      // Load from localStorage
+      const saved = loadInput(parentId);
+      if (saved !== null) {
+        if (input.type === 'checkbox') {
+          input.checked = saved === 'true';
+        } else {
+          input.value = saved;
+        }
+      }
+
+      // Save on change
+      input.addEventListener('input', () => {
+        if (input.type === 'checkbox') {
+          saveInput(parentId, input.checked);
+        } else {
+          saveInput(parentId, input.value);
+        }
+      });
+
+      // Also listen to checkbox changes
+      if (input.type === 'checkbox') {
+        input.addEventListener('change', () => {
+          saveInput(parentId, input.checked);
+        });
+      }
+    });
+  }
+
+  pages.forEach(setupStorageForPage);
+});
+</script>
+
+
+</body>
+
+</html>
