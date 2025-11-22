@@ -11,8 +11,8 @@ function initializeSheet() {
     // Auto-calculate movement values
     setupMovementCalculations();
     
-    // Auto-calculate carry capacity
-    setupCarryCapacityCalculations();
+    // Auto-calculate weight capacities
+    setupWeightCalculations();
     
     // Setup bonus-value auto-tab functionality
     setupBonusAutoTab();
@@ -101,26 +101,77 @@ function calculateMovement() {
     updateField('jump-base', baseJump);
 }
 
-// Setup carry capacity calculations
-function setupCarryCapacityCalculations() {
+// Setup weight capacity calculations
+function setupWeightCalculations() {
     const strBonus = document.getElementById('str-bonus');
     const toughBonus = document.getElementById('tough-bonus');
+    
+    // Weight capacity fields
+    const weightFields = ['carry-weight', 'lift-weight', 'push-weight'];
 
     if (strBonus && toughBonus) {
-        strBonus.addEventListener('input', calculateCarryCapacity);
-        toughBonus.addEventListener('input', calculateCarryCapacity);
+        strBonus.addEventListener('input', calculateWeights);
+        toughBonus.addEventListener('input', calculateWeights);
     }
+    
+    // Track manual edits to weight fields
+    weightFields.forEach(fieldId => {
+        const field = document.getElementById(fieldId);
+        if (field) {
+            field.addEventListener('input', function() {
+                // Mark as manually edited
+                this.dataset.manualEdit = 'true';
+            });
+            
+            // If field is cleared, remove manual edit flag
+            field.addEventListener('blur', function() {
+                if (this.value === '') {
+                    delete this.dataset.manualEdit;
+                    calculateWeights(); // Recalculate when cleared
+                }
+            });
+        }
+    });
 }
 
-function calculateCarryCapacity() {
+function calculateWeights() {
     const strBonus = parseInt(document.getElementById('str-bonus')?.value) || 0;
     const toughBonus = parseInt(document.getElementById('tough-bonus')?.value) || 0;
     
-    // Calculate: Carry (kg) ≈ 6 × (SB + TB)^1.6
     const sum = strBonus + toughBonus;
-    const carry = sum > 0 ? Math.round(6 * Math.pow(sum, 1.6)) : 0;
     
-    updateField('carry-capacity', carry);
+    // Lookup table for carrying weights
+    const weightTable = {
+        0: { carry: 0.9, lift: 2.25, push: 4.5 },
+        1: { carry: 2.25, lift: 4.5, push: 9 },
+        2: { carry: 4.5, lift: 9, push: 18 },
+        3: { carry: 9, lift: 18, push: 36 },
+        4: { carry: 18, lift: 36, push: 72 },
+        5: { carry: 27, lift: 54, push: 108 },
+        6: { carry: 36, lift: 72, push: 144 },
+        7: { carry: 45, lift: 90, push: 180 },
+        8: { carry: 56, lift: 112, push: 225 },
+        9: { carry: 67, lift: 135, push: 270 },
+        10: { carry: 78, lift: 157, push: 315 },
+        11: { carry: 90, lift: 180, push: 360 },
+        12: { carry: 112, lift: 225, push: 450 },
+        13: { carry: 225, lift: 450, push: 900 },
+        14: { carry: 337, lift: 675, push: 1350 },
+        15: { carry: 450, lift: 900, push: 1800 },
+        16: { carry: 675, lift: 1350, push: 2700 },
+        17: { carry: 900, lift: 1800, push: 3600 },
+        18: { carry: 1350, lift: 2700, push: 5400 },
+        19: { carry: 1800, lift: 3600, push: 7200 },
+        20: { carry: 2250, lift: 4500, push: 9000 }
+    };
+    
+    // Get weights from table, or use 0 if sum is out of range
+    const weights = weightTable[sum] || { carry: 0, lift: 0, push: 0 };
+    
+    // Update fields (will respect manual edits via updateField logic)
+    updateField('carry-weight', weights.carry);
+    updateField('lift-weight', weights.lift);
+    updateField('push-weight', weights.push);
 }
 
 // Setup auto-tab from bonus-value to ones-value
@@ -208,9 +259,9 @@ function loadSavedData() {
 
             console.log('Character sheet data loaded');
             
-            // Recalculate movement and carry capacity after loading
+            // Recalculate movement and weights after loading
             calculateMovement();
-            calculateCarryCapacity();
+            calculateWeights();
         }
     } catch (e) {
         console.error('Error loading character sheet:', e);
@@ -277,7 +328,7 @@ function importCharacter() {
                 });
 
                 calculateMovement();
-                calculateCarryCapacity();
+                calculateWeights();
                 saveFormData();
                 
                 alert('Character imported successfully!');
