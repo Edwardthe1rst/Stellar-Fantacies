@@ -928,7 +928,7 @@
                         </div>
                     </section>
                 </div>
-                <div class="grid-3">
+                <div class="grid-4">
                     <!-- Experience Points -->
                     <section class="experience box">
                         <h2>Experience Points</h2>
@@ -986,12 +986,27 @@
                                 <label for="jump-base">Base Jump (SB x20 cm)</label>
                                 <input class="input-default" type="number" id="jump-base">
                             </div>
+                        </div>
+                    </section>
+                    <!-- Weight Capacities -->
+                    <section class="weight-capacities box">
+                        <h2>Weight Capacities (SB + TB)</h2>
+                        <div class="weight-grid">
                             <div class="form-group">
-                                <label for="carry-capacity">Carry Capacity (kg)</label>
-                                <input class="input-default" type="number" id="carry-capacity">
+                                <label for="carry-weight">Carrying Weight (kg)</label>
+                                <input class="input-default" type="number" id="carry-weight" step="0.1">
+                            </div>
+                            <div class="form-group">
+                                <label for="lift-weight">Lifting Weight (kg)</label>
+                                <input class="input-default" type="number" id="lift-weight" step="0.1">
+                            </div>
+                            <div class="form-group">
+                                <label for="push-weight">Pushing Weight (kg)</label>
+                                <input class="input-default" type="number" id="push-weight" step="0.1">
                             </div>
                         </div>
-                    </section>                </div>
+                    </section>              
+                </div>
                 <!-- Weapons -->
                 <section class="weapons box">
                     <h2>Weapons</h2>
