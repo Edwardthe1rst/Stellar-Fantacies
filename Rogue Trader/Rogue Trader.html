@@ -1,0 +1,1528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rogue Trader Character Sheet</title>
+    <link rel="stylesheet" href="Rogue Trader.css">
+    <script src="Rogue Trader.js" defer></script>
+</head>
+<body>
+    <div class="grid-8">
+        <div class="dice-roller sidebar card">
+            <div class="dice-wrapper">
+                <object id="d4" class="dice" data="d4.svg" data-sides="4" type="image/svg+xml"></object>
+                <button class="dice-button" onclick="roll(this.parentElement)"></button>
+            </div>
+            <div class="dice-wrapper">
+                <object id="d6" class="dice" data="d6.svg" data-sides="6" type="image/svg+xml"></object>
+                <button class="dice-button" onclick="roll(this.parentElement)"></button>
+            </div>
+            <div class="dice-wrapper">
+                <object id="d8" class="dice" data="d8.svg" data-sides="8" type="image/svg+xml"></object>
+                <button class="dice-button" onclick="roll(this.parentElement)"></button>
+            </div>
+            <div class="dice-wrapper">
+                <object id="d10" class="dice" data="d10.svg" data-sides="10" type="image/svg+xml"></object>
+                <button class="dice-button" onclick="roll(this.parentElement)"></button>
+            </div>
+            <div class="dice-wrapper">
+                <object id="d12" class="dice" data="d12.svg" data-sides="12" type="image/svg+xml"></object>
+                <button class="dice-button" onclick="roll(this.parentElement)"></button>
+            </div>
+            <div class="dice-wrapper">
+                <div id="d100" class="dice double" data-sides="10">
+                    <object data="d10.svg" type="image/svg+xml"></object>
+                    <object data="d10.svg" type="image/svg+xml"></object>
+                </div>
+                <button class="dice-button" onclick="roll(this.parentElement)"></button>
+            </div>
+        </div>
+        <div class="character-sheet most-horizontal">
+            <header class="sheet-header">
+                <h1>Rogue Trader Character Sheet</h1>
+                <button type="button" id="reset-button" class="reset-btn" onclick="resetForm()">Reset</button>
+                <button type="button" id="export-button" class="reset-btn" onclick="exportCharacter()">Export to JSON</button>
+                <button type="button" id="import-button" class="reset-btn" onclick="importCharacter()">Import from JSON</button>
+            </header>
+
+            <!-- Page 1 -->
+            <section class="page page-1">
+                <!-- Basic Info -->
+                <div class="basic-info box">
+                    <div class="form-group">
+                        <label for="character-name">Character Name</label>
+                        <input class="input-default" type="text" id="character-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="player-name">Player Name</label>
+                        <input class="input-default" type="text" id="player-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="rank">Rank</label>
+                        <select class="input-default"id="rank">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="career-path">Career Path</label>
+                        <input class="input-default" type="text" id="career-path">
+                    </div>
+                    <div class="form-group">
+                        <label for="homeworld">Home World</label>
+                        <input class="input-default" type="text" id="homeworld">
+                    </div>
+                    <div class="form-group">
+                        <label for="motivation">Motivation</label>
+                        <input class="input-default" type="text" id="motivation">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="description">Description</label>
+                        <textarea class="input-default"id="description" rows="2"></textarea>
+                    </div>
+                </div>
+
+                <!-- Characteristics -->
+                <section class="characteristics box">
+                    <h2>Characteristics</h2>
+                    <div class="char-grid">
+                        <div class="char-stat box">
+                            <label>Weapon Skill</label>
+                            <br/>
+                            <input class="input-default" type="number" id="ws-value" class="char-value">
+                            <div class="advances">
+                                <input class="input-default" type="checkbox" id="ws-adv-1">
+                                <input class="input-default" type="checkbox" id="ws-adv-2">
+                                <input class="input-default" type="checkbox" id="ws-adv-3">
+                                <input class="input-default" type="checkbox" id="ws-adv-4">
+                            </div>
+                            <span class="adv-label">Advantage Taken</span>
+                        </div>
+
+                        <div class="char-stat box">
+                            <label>Ballistic Skill</label>
+                            <br/>
+                            <input class="input-default" type="number" id="bs-value" class="char-value">
+                            <div class="advances">
+                                <input class="input-default" type="checkbox" id="bs-adv-1">
+                                <input class="input-default" type="checkbox" id="bs-adv-2">
+                                <input class="input-default" type="checkbox" id="bs-adv-3">
+                                <input class="input-default" type="checkbox" id="bs-adv-4">
+                            </div>
+                            <span class="adv-label">Advantage Taken</span>
+                        </div>
+
+                        <div class="char-stat box">
+                            <label>Strength</label>
+                            <br/>
+                            <input type="number" id="str-bonus" class="bonus-value stat-input-small" placeholder="SB">
+                            <input type="number" id="str-ones" class="ones-value stat-input-small" placeholder="Ones">
+                            <div class="advances">
+                                <input class="input-default" type="checkbox" id="str-adv-1">
+                                <input class="input-default" type="checkbox" id="str-adv-2">
+                                <input class="input-default" type="checkbox" id="str-adv-3">
+                                <input class="input-default" type="checkbox" id="str-adv-4">
+                            </div>
+                            <span class="adv-label">Advantage Taken</span>
+                        </div>
+
+                        <div class="char-stat box">
+                            <label>Toughness</label>
+                            <br/>
+                            <input type="number" id="tough-bonus" class="bonus-value stat-input-small" placeholder="TB">
+                            <input type="number" id="tough-ones" class="ones-value stat-input-small" placeholder="Ones">
+                            <div class="advances">
+                                <input class="input-default" type="checkbox" id="tough-adv-1">
+                                <input class="input-default" type="checkbox" id="tough-adv-2">
+                                <input class="input-default" type="checkbox" id="tough-adv-3">
+                                <input class="input-default" type="checkbox" id="tough-adv-4">
+                            </div>
+                            <span class="adv-label">Advantage Taken</span>
+                        </div>
+
+                        <div class="char-stat box">
+                            <label>Agility</label>
+                            <br/>
+                            <input type="number" id="ag-bonus" class="bonus-value stat-input-small" placeholder="AB">
+                            <input type="number" id="ag-ones" class="ones-value stat-input-small" placeholder="Ones">
+                            <div class="advances">
+                                <input class="input-default" type="checkbox" id="ag-adv-1">
+                                <input class="input-default" type="checkbox" id="ag-adv-2">
+                                <input class="input-default" type="checkbox" id="ag-adv-3">
+                                <input class="input-default" type="checkbox" id="ag-adv-4">
+                            </div>
+                            <span class="adv-label">Advantage Taken</span>
+                        </div>
+
+                        <div class="char-stat box">
+                            <label>Intelligence</label>
+                            <br/>
+                            <input id="int-bonus" class="bonus-value stat-input-small" placeholder="IB">
+                            <input id="int-ones" class="ones-value stat-input-small" placeholder="Ones">
+                            <div class="advances">
+                                <input class="input-default" type="checkbox" id="int-adv-1">
+                                <input class="input-default" type="checkbox" id="int-adv-2">
+                                <input class="input-default" type="checkbox" id="int-adv-3">
+                                <input class="input-default" type="checkbox" id="int-adv-4">
+                            </div>
+                            <span class="adv-label">Advantage Taken</span>
+                        </div>
+
+                        <div class="char-stat box">
+                            <label>Perception</label>
+                            <br/>
+                            <input id="per-bonus" class="bonus-value stat-input-small" placeholder="PB">
+                            <input id="per-ones" class="ones-value stat-input-small" placeholder="Ones">
+                            <div class="advances">
+                                <input class="input-default" type="checkbox" id="per-adv-1">
+                                <input class="input-default" type="checkbox" id="per-adv-2">
+                                <input class="input-default" type="checkbox" id="per-adv-3">
+                                <input class="input-default" type="checkbox" id="per-adv-4">
+                            </div>
+                            <span class="adv-label">Advantage Taken</span>
+                        </div>
+
+                        <div class="char-stat box">
+                            <label>Will Power</label>
+                            <br/>
+                            <input id="wp-bonus" class="bonus-value stat-input-small" placeholder="WPB">
+                            <input id="wp-ones" class="ones-value stat-input-small" placeholder="Ones">
+                            <div class="advances">
+                                <input class="input-default" type="checkbox" id="wp-adv-1">
+                                <input class="input-default" type="checkbox" id="wp-adv-2">
+                                <input class="input-default" type="checkbox" id="wp-adv-3">
+                                <input class="input-default" type="checkbox" id="wp-adv-4">
+                            </div>
+                            <span class="adv-label">Advantage Taken</span>
+                        </div>
+
+                        <div class="char-stat box">
+                            <label>Fellowship</label>
+                            <br/>
+                            <input type="number" id="fel-bonus" class="bonus-value stat-input-small" placeholder="FB">
+                            <input type="number" id="fel-ones" class="ones-value stat-input-small" placeholder="Ones">
+                            <div class="advances">
+                                <input class="input-default" type="checkbox" id="fel-adv-1">
+                                <input class="input-default" type="checkbox" id="fel-adv-2">
+                                <input class="input-default" type="checkbox" id="fel-adv-3">
+                                <input class="input-default" type="checkbox" id="fel-adv-4">
+                            </div>
+                            <span class="adv-label">Advantage Taken</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Skills and Talents Layout -->
+                <div class="skills-talents-container grid-2 full-vertical box">
+                    <section class="skills">
+                        <h2>Skills</h2>
+                        <table class="skills-table">
+                            <thead>
+                                <tr>
+                                    <th>Skill Name</th>
+                                    <th>Basic</th>
+                                    <th>Trained</th>
+                                    <th>+10%</th>
+                                    <th>+20%</th>
+                                    <th>Bonus</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Acrobatics (Ag)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-acrobatics-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-acrobatics-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-acrobatics-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-acrobatics-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-acrobatics-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Awareness (Per)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-awareness-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-awareness-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-awareness-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-awareness-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-awareness-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Barter (Fel)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-barter-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-barter-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-barter-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-barter-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-barter-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Blather (Fel)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-blather-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-blather-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-blather-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-blather-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-blather-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Carouse (T)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-carouse-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-carouse-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-carouse-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-carouse-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-carouse-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Charm (Fel)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-charm-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-charm-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-charm-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-charm-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-charm-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Chem-Use (Int)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-chemuse-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-chemuse-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-chemuse-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-chemuse-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-chemuse-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Ciphers (Int)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-ciphers-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-ciphers-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-ciphers-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-ciphers-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-ciphers-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Climb (S)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-climb-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-climb-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-climb-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-climb-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-climb-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Command (Fel)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-command-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-command-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-command-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-command-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-command-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Commerce (Fel)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-commerce-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-commerce-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-commerce-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-commerce-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-commerce-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Common Lore (Int)</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="input-default" type="text" id="skill-commonlore-1" class="subskill"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-commonlore-1-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-commonlore-1-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-commonlore-1-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-commonlore-1-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-commonlore-1-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="input-default" type="text" id="skill-commonlore-2" class="subskill"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-commonlore-2-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-commonlore-2-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-commonlore-2-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-commonlore-2-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-commonlore-2-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="input-default" type="text" id="skill-commonlore-3" class="subskill"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-commonlore-3-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-commonlore-3-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-commonlore-3-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-commonlore-3-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-commonlore-3-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="input-default" type="text" id="skill-commonlore-4" class="subskill"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-commonlore-4-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-commonlore-4-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-commonlore-4-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-commonlore-4-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-commonlore-4-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Concealment (Ag)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-concealment-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-concealment-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-concealment-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-concealment-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-concealment-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Contortionist (Ag)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-contortionist-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-contortionist-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-contortionist-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-contortionist-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-contortionist-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Deceive (Fel)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-deceive-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-deceive-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-deceive-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-deceive-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-deceive-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Demolition (Int)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-demolition-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-demolition-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-demolition-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-demolition-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-demolition-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Disguise (Fel)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-disguise-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-disguise-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-disguise-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-disguise-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-disguise-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Dodge (Ag)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-dodge-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-dodge-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-dodge-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-dodge-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-dodge-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Drive (Ag)</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="input-default" type="text" id="skill-drive-1" class="subskill"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-drive-1-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-drive-1-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-drive-1-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-drive-1-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-drive-1-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Evaluate (Int)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-evaluate-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-evaluate-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-evaluate-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-evaluate-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-evaluate-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Forbidden Lore (Int)</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="input-default" type="text" id="skill-forbiddenlore-1" class="subskill"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-forbiddenlore-1-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-forbiddenlore-1-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-forbiddenlore-1-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-forbiddenlore-1-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-forbiddenlore-1-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="input-default" type="text" id="skill-forbiddenlore-2" class="subskill"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-forbiddenlore-2-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-forbiddenlore-2-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-forbiddenlore-2-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-forbiddenlore-2-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-forbiddenlore-2-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="input-default" type="text" id="skill-forbiddenlore-3" class="subskill"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-forbiddenlore-3-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-forbiddenlore-3-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-forbiddenlore-3-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-forbiddenlore-3-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-forbiddenlore-3-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="input-default" type="text" id="skill-forbiddenlore-4" class="subskill"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-forbiddenlore-4-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-forbiddenlore-4-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-forbiddenlore-4-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-forbiddenlore-4-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-forbiddenlore-4-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Gamble (Int)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-gamble-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-gamble-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-gamble-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-gamble-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-gamble-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Inquiry (Fel)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-inquiry-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-inquiry-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-inquiry-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-inquiry-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-inquiry-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Interrogation (WP)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-interrogation-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-interrogation-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-interrogation-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-interrogation-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-interrogation-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Intimidate (S)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-intimidate-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-intimidate-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-intimidate-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-intimidate-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-intimidate-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Invocation (WP)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-invocation-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-invocation-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-invocation-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-invocation-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-invocation-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Lip Reading (Per)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-lipreading-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-lipreading-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-lipreading-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-lipreading-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-lipreading-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Literacy (Int)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-literacy-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-literacy-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-literacy-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-literacy-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-literacy-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Logic (Int)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-logic-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-logic-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-logic-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-logic-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-logic-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Medicae (Int)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-medicae-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-medicae-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-medicae-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-medicae-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-medicae-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Navigation (Int)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-navigation-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-navigation-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-navigation-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-navigation-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-navigation-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Performer (Fel)</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="input-default" type="text" id="skill-performer-1" class="subskill"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-performer-1-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-performer-1-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-performer-1-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-performer-1-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-performer-1-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="input-default" type="text" id="skill-performer-2" class="subskill"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-performer-2-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-performer-2-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-performer-2-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-performer-2-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-performer-2-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Pilot (Ag)</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="input-default" type="text" id="skill-pilot-1" class="subskill"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-pilot-1-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-pilot-1-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-pilot-1-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-pilot-1-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-pilot-1-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="input-default" type="text" id="skill-pilot-2" class="subskill"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-pilot-2-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-pilot-2-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-pilot-2-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-pilot-2-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-pilot-2-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Psyniscience (Per)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-psyniscience-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-psyniscience-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-psyniscience-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-psyniscience-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-psyniscience-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Scholastic Lore (Int)</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="input-default" type="text" id="skill-scholasticlore-1" class="subskill"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-scholasticlore-1-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-scholasticlore-1-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-scholasticlore-1-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-scholasticlore-1-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-scholasticlore-1-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="input-default" type="text" id="skill-scholasticlore-2" class="subskill"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-scholasticlore-2-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-scholasticlore-2-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-scholasticlore-2-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-scholasticlore-2-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-scholasticlore-2-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="input-default" type="text" id="skill-scholasticlore-3" class="subskill"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-scholasticlore-3-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-scholasticlore-3-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-scholasticlore-3-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-scholasticlore-3-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-scholasticlore-3-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="input-default" type="text" id="skill-scholasticlore-4" class="subskill"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-scholasticlore-4-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-scholasticlore-4-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-scholasticlore-4-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-scholasticlore-4-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-scholasticlore-4-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Scrutiny (Per)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-scrutiny-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-scrutiny-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-scrutiny-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-scrutiny-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-scrutiny-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Search (Per)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-search-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-search-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-search-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-search-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-search-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Secret Tongue (Int)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-secrettongue-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-secrettongue-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-secrettongue-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-secrettongue-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-secrettongue-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Security (Ag)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-security-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-security-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-security-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-security-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-security-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Shadowing (Ag)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-shadowing-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-shadowing-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-shadowing-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-shadowing-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-shadowing-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Silent Move (Ag)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-silentmove-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-silentmove-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-silentmove-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-silentmove-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-silentmove-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Sleight of Hand (Ag)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-sleightofhand-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-sleightofhand-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-sleightofhand-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-sleightofhand-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-sleightofhand-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Speak Language (Int)</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="input-default" type="text" id="skill-speaklanguage-1" class="subskill"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-speaklanguage-1-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-speaklanguage-1-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-speaklanguage-1-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-speaklanguage-1-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-speaklanguage-1-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="input-default" type="text" id="skill-speaklanguage-2" class="subskill"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-speaklanguage-2-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-speaklanguage-2-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-speaklanguage-2-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-speaklanguage-2-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-speaklanguage-2-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="input-default" type="text" id="skill-speaklanguage-3" class="subskill"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-speaklanguage-3-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-speaklanguage-3-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-speaklanguage-3-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-speaklanguage-3-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-speaklanguage-3-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="input-default" type="text" id="skill-speaklanguage-4" class="subskill"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-speaklanguage-4-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-speaklanguage-4-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-speaklanguage-4-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-speaklanguage-4-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-speaklanguage-4-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Survival (Int)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-survival-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-survival-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-survival-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-survival-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-survival-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Swim (S)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-swim-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-swim-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-swim-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-swim-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-swim-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Tech-Use (Int)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-techuse-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-techuse-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-techuse-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-techuse-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-techuse-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Tracking (Int)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-tracking-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-tracking-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-tracking-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-tracking-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-tracking-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Trade (Int)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-trade-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-trade-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-trade-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-trade-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-trade-bonus"></td>
+                                </tr>
+                                <tr>
+                                    <td>Wrangling (Int)</td>
+                                    <td><input class="input-default" type="checkbox" id="skill-wrangling-basic"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-wrangling-trained"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-wrangling-10"></td>
+                                    <td><input class="input-default" type="checkbox" id="skill-wrangling-20"></td>
+                                    <td><input class="input-default" type="number" id="skill-wrangling-bonus"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section class="talents box">
+                        <h2>Talents & Traits</h2>
+                        <div class="talent-list">
+                            <input class="input-default" type="text" id="talent-1" placeholder="Talent 1"><br>
+                            <input class="input-default" type="text" id="talent-2" placeholder="Talent 2"><br>
+                            <input class="input-default" type="text" id="talent-3" placeholder="Talent 3"><br>
+                            <input class="input-default" type="text" id="talent-4" placeholder="Talent 4"><br>
+                            <input class="input-default" type="text" id="talent-5" placeholder="Talent 5"><br>
+                            <input class="input-default" type="text" id="talent-6" placeholder="Talent 6"><br>
+                            <input class="input-default" type="text" id="talent-7" placeholder="Talent 7"><br>
+                            <input class="input-default" type="text" id="talent-8" placeholder="Talent 8"><br>
+                            <input class="input-default" type="text" id="talent-9" placeholder="Talent 9"><br>
+                            <input class="input-default" type="text" id="talent-10" placeholder="Talent 10"><br>
+                            <input class="input-default" type="text" id="talent-11" placeholder="Talent 11"><br>
+                            <input class="input-default" type="text" id="talent-12" placeholder="Talent 12"><br>
+                            <input class="input-default" type="text" id="talent-13" placeholder="Talent 13"><br>
+                            <input class="input-default" type="text" id="talent-14" placeholder="Talent 14"><br>
+                            <input class="input-default" type="text" id="talent-15" placeholder="Talent 15"><br>
+                            <input class="input-default" type="text" id="talent-16" placeholder="Talent 16"><br>
+                            <input class="input-default" type="text" id="talent-17" placeholder="Talent 17"><br>
+                            <input class="input-default" type="text" id="talent-18" placeholder="Talent 18"><br>
+                            <input class="input-default" type="text" id="talent-19" placeholder="Talent 19"><br>
+                            <input class="input-default" type="text" id="talent-20" placeholder="Talent 20">
+                        </div>
+                    </section>
+                    <!-- Special Abilities -->
+                    <section class="special-abilities box">
+                        <h2>Special Abilities</h2>
+                        <div class="ability-list">
+                            <input class="input-default" type="text" id="special-ability-1" placeholder="Special Ability 1"><br>
+                            <input class="input-default" type="text" id="special-ability-2" placeholder="Special Ability 2"><br>
+                            <input class="input-default" type="text" id="special-ability-3" placeholder="Special Ability 3"><br>
+                            <input class="input-default" type="text" id="special-ability-4" placeholder="Special Ability 4"><br>
+                            <input class="input-default" type="text" id="special-ability-5" placeholder="Special Ability 5"><br>
+                            <input class="input-default" type="text" id="special-ability-6" placeholder="Special Ability 6">
+                        </div>
+                    </section>
+                </div>
+                <div class="psychic-abilities grid-2">
+                    <!-- Psychic Techniques -->
+                    <section class="psychic-techniques box">
+                        <h2>Psychic Techniques</h2>
+                        <table class="techniques-table,">
+                            <thead>
+                                <tr>
+                                    <th>Power</th>
+                                    <th>Sustain</th>
+                                    <th>Range</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input class="input-default" type="text" id="psychic-power-1"></td>
+                                    <td>
+                                        <select class="input-default"id="psychic-power-1-sustain">
+                                            <option value="N/A">N/A</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </td>
+                                    <td><input class="input-default" type="text" id="psychic-power-1-range"></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="input-default" type="text" id="psychic-power-2"></td>
+                                    <td>
+                                        <select class="input-default"id="psychic-power-2-sustain">
+                                            <option value="N/A">N/A</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </td>
+                                    <td><input class="input-default" type="text" id="psychic-power-2-range"></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="input-default" type="text" id="psychic-power-3"></td>
+                                    <td>
+                                        <select class="input-default"id="psychic-power-3-sustain">
+                                            <option value="N/A">N/A</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </td>
+                                    <td><input class="input-default" type="text" id="psychic-power-3-range"></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="input-default" type="text" id="psychic-power-4"></td>
+                                    <td>
+                                        <select class="input-default"id="psychic-power-4-sustain">
+                                            <option value="N/A">N/A</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </td>
+                                    <td><input class="input-default" type="text" id="psychic-power-4-range"></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="input-default" type="text" id="psychic-power-5"></td>
+                                    <td>
+                                        <select class="input-default"id="psychic-power-5-sustain">
+                                            <option value="N/A">N/A</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </td>
+                                    <td><input class="input-default" type="text" id="psychic-power-5-range"></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="input-default" type="text" id="psychic-power-6"></td>
+                                    <td>
+                                        <select class="input-default"id="psychic-power-6-sustain">
+                                            <option value="N/A">N/A</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </td>
+                                    <td><input class="input-default" type="text" id="psychic-power-6-range"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <!-- Psychic Disciplines -->
+                    <section class="psychic-disciplines box">
+                        <h2>Psychic Disciplines</h2>
+                        <div class="discipline-list">
+                            <input class="input-default" type="text" id="psychic-discipline-1" placeholder="Discipline 1"><br>
+                            <input class="input-default" type="text" id="psychic-discipline-2" placeholder="Discipline 2"><br>
+                            <input class="input-default" type="text" id="psychic-discipline-3" placeholder="Discipline 3">
+                        </div>
+                    </section>
+                </div>
+                <div class="grid-3">
+                    <!-- Experience Points -->
+                    <section class="experience box">
+                        <h2>Experience Points</h2>
+                        <div class="xp-fields">
+                            <div class="form-group">
+                                <label for="xp-total">Total XP Spent</label>
+                                <input class="input-default" type="number" id="xp-total">
+                            </div>
+                            <div class="form-group">
+                                <label for="xp-available">XP to Spend</label>
+                                <input class="input-default" type="number" id="xp-available">
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Profit Factor -->
+                    <section class="profit-factor box">
+                        <h2>Profit Factor</h2>
+                        <div class="form-group">
+                            <label for="profit-starting">Starting</label>
+                            <br/>
+                            <input class="input-default" type="number" id="profit-starting">
+                        </div>
+                        <div class="form-group">
+                            <label for="profit-current">Current</label>
+                            <br/>
+                            <input class="input-default" type="number" id="profit-current">
+                        </div>
+                        <div class="form-group">
+                            <label for="profit-misfortunes">Misfortunes</label>
+                            <textarea class="input-default"id="profit-misfortunes" rows="3"></textarea>
+                        </div>
+                    <!-- Movement -->
+                    <section class="movement box">
+                        <h2>Movement</h2>
+                        <div class="movement-grid">
+                            <div class="form-group">
+                                <label for="move-half">Half Move (AB x1)</label>
+                                <input class="input-default" type="number" id="move-half">
+                            </div>
+                            <div class="form-group">
+                                <label for="move-full">Full Move (AB x2)</label>
+                                <input class="input-default" type="number" id="move-full">
+                            </div>
+                            <div class="form-group">
+                                <label for="move-charge">Charge (AB x3)</label>
+                                <input class="input-default" type="number" id="move-charge">
+                            </div>
+                            <div class="form-group">
+                                <label for="move-run">Run (AB x6)</label>
+                                <input class="input-default" type="number" id="move-run">
+                            </div>
+                            <div class="form-group">
+                                <label for="jump-base">Base Jump (SB x20 cm)</label>
+                                <input class="input-default" type="number" id="jump-base">
+                            </div>
+                            <div class="form-group">
+                                <label for="carry-capacity">Carry Capacity (kg)</label>
+                                <input class="input-default" type="number" id="carry-capacity">
+                            </div>
+                        </div>
+                    </section>                </div>
+                <!-- Weapons -->
+                <section class="weapons box">
+                    <h2>Weapons</h2>
+                    <div class="grid-2">
+                        <div class="weapon-entry box grid-4">
+                            <div class="form-group">
+                                <label for="weapon-1-name">Name</label>
+                                <input class="input-default" type="text" id="weapon-1-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-1-quality">Quality</label>
+                                <select class="input-default" id="weapon-1-quality">
+                                    <option value="Poor Craftmanship">Poor Craftmanship</option>
+                                    <option value="Normal Craftmanship" selected>Normal Craftmanship</option>
+                                    <option value="Good Craftmanship">Good Craftmanship</option>
+                                    <option value="Best Craftmanship">Best Craftmanship</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-1-class">Class</label>
+                                <select class="input-default" id="weapon-1-class">
+                                    <option value="Basic">Basic</option>
+                                    <option value="Pistol" selected>Pistol</option>
+                                    <option value="Heavy">Heavy</option>
+                                    <option value="Melee">Melee</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-1-damage">Damage</label>
+                                <input class="input-default" type="text" id="weapon-1-damage">
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-1-pen">Pen</label>
+                                <input class="input-default" type="number" id="weapon-1-pen">
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-1-range">Range</label>
+                                <input class="input-default" type="text" id="weapon-1-range">
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-1-rof">ROF</label>
+                                <input class="input-default" type="text" id="weapon-1-rof">
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-1-clip">Clip</label>
+                                <input class="input-default" type="number" id="weapon-1-clip">
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-1-reload">Reload</label>
+                                <input class="input-default" type="text" id="weapon-1-reload">
+                            </div>
+                            <div class="form-group post-full-width">
+                                <label for="weapon-1-special">Special Rules</label>
+                                <input class="input-default" type="text" id="weapon-1-special">
+                            </div>
+                        </div>
+                        <div class="weapon-entry box grid-4">
+                            <div class="form-group">
+                                <label for="weapon-2-name">Name</label>
+                                <input class="input-default" type="text" id="weapon-2-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-2-quality">Quality</label>
+                                <select class="input-default"id="weapon-2-quality">
+                                    <option value="Poor Craftmanship">Poor Craftmanship</option>
+                                    <option value="Normal Craftmanship" selected>Normal Craftmanship</option>
+                                    <option value="Good Craftmanship">Good Craftmanship</option>
+                                    <option value="Best Craftmanship">Best Craftmanship</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-2-class">Class</label>
+                                <select class="input-default"id="weapon-2-class">
+                                    <option value="Basic">Basic</option>
+                                    <option value="Pistol" selected>Pistol</option>
+                                    <option value="Heavy">Heavy</option>
+                                    <option value="Melee">Melee</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-2-damage">Damage</label>
+                                <input class="input-default" type="text" id="weapon-2-damage">
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-2-pen">Pen</label>
+                                <input class="input-default" type="number" id="weapon-2-pen">
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-2-range">Range</label>
+                                <input class="input-default" type="text" id="weapon-2-range">
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-2-rof">ROF</label>
+                                <input class="input-default" type="text" id="weapon-2-rof">
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-2-clip">Clip</label>
+                                <input class="input-default" type="number" id="weapon-2-clip">
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-2-reload">Reload</label>
+                                <input class="input-default" type="text" id="weapon-2-reload">
+                            </div>
+                            <div class="form-group post-full-width">
+                                <label for="weapon-2-special">Special Rules</label>
+                                <input class="input-default" type="text" id="weapon-2-special">
+                            </div>
+                        </div>
+                        <div class="weapon-entry box grid-4">
+                            <div class="form-group">
+                                <label for="weapon-3-name">Name</label>
+                                <input class="input-default" type="text" id="weapon-3-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-3-quality">Quality</label>
+                                <select class="input-default"id="weapon-3-quality">
+                                    <option value="Poor Craftmanship">Poor Craftmanship</option>
+                                    <option value="Normal Craftmanship" selected>Normal Craftmanship</option>
+                                    <option value="Good Craftmanship">Good Craftmanship</option>
+                                    <option value="Best Craftmanship">Best Craftmanship</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-3-class">Class</label>
+                                <select class="input-default"id="weapon-3-class">
+                                    <option value="Basic">Basic</option>
+                                    <option value="Pistol" selected>Pistol</option>
+                                    <option value="Heavy">Heavy</option>
+                                    <option value="Melee">Melee</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-3-damage">Damage</label>
+                                <input class="input-default" type="text" id="weapon-3-damage">
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-3-pen">Pen</label>
+                                <input class="input-default" type="number" id="weapon-3-pen">
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-3-range">Range</label>
+                                <input class="input-default" type="text" id="weapon-3-range">
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-3-rof">ROF</label>
+                                <input class="input-default" type="text" id="weapon-3-rof">
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-3-clip">Clip</label>
+                                <input class="input-default" type="number" id="weapon-3-clip">
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-3-reload">Reload</label>
+                                <input class="input-default" type="text" id="weapon-3-reload">
+                            </div>
+                            <div class="form-group post-full-width">
+                                <label for="weapon-3-special">Special Rules</label>
+                                <input class="input-default" type="text" id="weapon-3-special">
+                            </div>
+                        </div>
+                        <div class="weapon-entry box grid-4">
+                            <div class="form-group">
+                                <label for="weapon-4-name">Name</label>
+                                <input class="input-default" type="text" id="weapon-4-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-4-quality">Quality</label>
+                                <select class="input-default"id="weapon-4-quality">
+                                    <option value="Poor Craftmanship">Poor Craftmanship</option>
+                                    <option value="Normal Craftmanship" selected>Normal Craftmanship</option>
+                                    <option value="Good Craftmanship">Good Craftmanship</option>
+                                    <option value="Best Craftmanship">Best Craftmanship</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-4-class">Class</label>
+                                <select class="input-default"id="weapon-4-class">
+                                    <option value="Basic">Basic</option>
+                                    <option value="Pistol" selected>Pistol</option>
+                                    <option value="Heavy">Heavy</option>
+                                    <option value="Melee">Melee</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-4-damage">Damage</label>
+                                <input class="input-default" type="text" id="weapon-4-damage">
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-4-pen">Pen</label>
+                                <input class="input-default" type="number" id="weapon-4-pen">
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-4-range">Range</label>
+                                <input class="input-default" type="text" id="weapon-4-range">
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-4-rof">ROF</label>
+                                <input class="input-default" type="text" id="weapon-4-rof">
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-4-clip">Clip</label>
+                                <input class="input-default" type="number" id="weapon-4-clip">
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-4-reload">Reload</label>
+                                <input class="input-default" type="text" id="weapon-4-reload">
+                            </div>
+                            <div class="form-group post-full-width">
+                                <label for="weapon-4-special">Special Rules</label>
+                                <input class="input-default" type="text" id="weapon-4-special">
+                            </div>
+                        </div>
+                        <div class="weapon-entry box grid-4">
+                            <div class="form-group">
+                                <label for="weapon-5-name">Name</label>
+                                <input class="input-default" type="text" id="weapon-5-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-5-quality">Quality</label>
+                                <select class="input-default"id="weapon-5-quality">
+                                    <option value="Poor Craftmanship">Poor Craftmanship</option>
+                                    <option value="Normal Craftmanship" selected>Normal Craftmanship</option>
+                                    <option value="Good Craftmanship">Good Craftmanship</option>
+                                    <option value="Best Craftmanship">Best Craftmanship</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-5-class">Class</label>
+                                <select class="input-default"id="weapon-5-class">
+                                    <option value="Basic">Basic</option>
+                                    <option value="Pistol" selected>Pistol</option>
+                                    <option value="Heavy">Heavy</option>
+                                    <option value="Melee">Melee</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-5-damage">Damage</label>
+                                <input class="input-default" type="text" id="weapon-5-damage">
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-5-pen">Pen</label>
+                                <input class="input-default" type="number" id="weapon-5-pen">
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-5-range">Range</label>
+                                <input class="input-default" type="text" id="weapon-5-range">
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-5-rof">ROF</label>
+                                <input class="input-default" type="text" id="weapon-5-rof">
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-5-clip">Clip</label>
+                                <input class="input-default" type="number" id="weapon-5-clip">
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-5-reload">Reload</label>
+                                <input class="input-default" type="text" id="weapon-5-reload">
+                            </div>
+                            <div class="form-group post-full-width">
+                                <label for="weapon-5-special">Special Rules</label>
+                                <input class="input-default" type="text" id="weapon-5-special">
+                            </div>
+                        </div>
+                        <div class="weapon-entry box grid-4">
+                            <div class="form-group">
+                                <label for="weapon-6-name">Name</label>
+                                <input class="input-default" type="text" id="weapon-6-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-6-quality">Quality</label>
+                                <select class="input-default"id="weapon-6-quality">
+                                    <option value="Poor Craftmanship">Poor Craftmanship</option>
+                                    <option value="Normal Craftmanship" selected>Normal Craftmanship</option>
+                                    <option value="Good Craftmanship">Good Craftmanship</option>
+                                    <option value="Best Craftmanship">Best Craftmanship</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-6-class">Class</label>
+                                <select class="input-default"id="weapon-6-class">
+                                    <option value="Basic">Basic</option>
+                                    <option value="Pistol" selected>Pistol</option>
+                                    <option value="Heavy">Heavy</option>
+                                    <option value="Melee">Melee</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-6-damage">Damage</label>
+                                <input class="input-default" type="text" id="weapon-6-damage">
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-6-pen">Pen</label>
+                                <input class="input-default" type="number" id="weapon-6-pen">
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-6-range">Range</label>
+                                <input class="input-default" type="text" id="weapon-6-range">
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-6-rof">ROF</label>
+                                <input class="input-default" type="text" id="weapon-6-rof">
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-6-clip">Clip</label>
+                                <input class="input-default" type="number" id="weapon-6-clip">
+                            </div>
+                            <div class="form-group">
+                                <label for="weapon-6-reload">Reload</label>
+                                <input class="input-default" type="text" id="weapon-6-reload">
+                            </div>
+                            <div class="form-group post-full-width">
+                                <label for="weapon-6-special">Special Rules</label>
+                                <input class="input-default" type="text" id="weapon-6-special">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Armour -->
+                <section class="grid-4">
+                    <section class="armour-section box">
+                        <h2>Armour</h2>
+                        <div class="armour-grid">
+                            <div class="armour box armour-head">
+                                <label for="armour-head">Head (1-10)</label>
+                                <input class="input-default" type="number" id="armour-head">
+                                <select class="input-default"id="armour-head-type">
+                                    <option value="Flak">Flak</option>
+                                    <option value="Mesh">Mesh</option>
+                                    <option value="Carapace">Carapace</option>
+                                    <option value="Powered">Powered</option>
+                                </select>
+                            </div>
+                            <div class="armour box armour-right-arm">
+                                <label for="armour-right-arm">Right Arm (11-20)</label>
+                                <input class="input-default" type="number" id="armour-right-arm">
+                                <select class="input-default"id="armour-right-arm-type">
+                                    <option value="Flak">Flak</option>
+                                    <option value="Mesh">Mesh</option>
+                                    <option value="Carapace">Carapace</option>
+                                    <option value="Powered">Powered</option>
+                                </select>
+                            </div>
+                            <div class="armour box armour-left-arm">
+                                <label for="armour-left-arm">Left Arm (21-30)</label>
+                                <input class="input-default" type="number" id="armour-left-arm">
+                                <select class="input-default"id="armour-left-arm-type">
+                                    <option value="Flak">Flak</option>
+                                    <option value="Mesh">Mesh</option>
+                                    <option value="Carapace">Carapace</option>
+                                    <option value="Powered">Powered</option>
+                                </select>
+                            </div>
+                            <div class="armour box armour-body">
+                                <label for="armour-body">Body (31-70)</label>
+                                <input class="input-default" type="number" id="armour-body">
+                                <select class="input-default"id="armour-body-type">
+                                    <option value="Flak">Flak</option>
+                                    <option value="Mesh">Mesh</option>
+                                    <option value="Carapace">Carapace</option>
+                                    <option value="Powered">Powered</option>
+                                </select>
+                            </div>
+                            <div class="armour box armour-right-leg">
+                                <label for="armour-right-leg">Right Leg (71-85)</label>
+                                <input class="input-default" type="number" id="armour-right-leg">
+                                <select class="input-default"id="armour-right-leg-type">
+                                    <option value="Flak">Flak</option>
+                                    <option value="Mesh">Mesh</option>
+                                    <option value="Carapace">Carapace</option>
+                                    <option value="Powered">Powered</option>
+                                </select>
+                            </div>
+                            <div class="armour box armour-left-leg">
+                                <label for="armour-left-leg">Left Leg (86-100)</label>
+                                <input class="input-default" type="number" id="armour-left-leg">
+                                <select class="input-default"id="armour-left-leg-type">
+                                    <option value="Flak">Flak</option>
+                                    <option value="Mesh">Mesh</option>
+                                    <option value="Carapace">Carapace</option>
+                                    <option value="Powered">Powered</option>
+                                </select>
+                            </div>
+                        </div>
+                    </section>
+
+                <!-- Wounds, Fate, Corruption, Insanity -->
+                    <div class="condition-group box">
+                        <h2>Wounds</h2>
+                        <div class="form-group">
+                            <label for="wounds-current">Current</label>
+                            <br/>
+                            <input class="input-default" type="number" id="wounds-current">
+                        </div>
+                        <div class="form-group">
+                            <label for="wounds-total">Total</label>
+                            <br/>
+                            <input class="input-default" type="number" id="wounds-total">
+                        </div>
+                        <div class="form-group">
+                            <label for="wounds-critical">Critical Damage</label>
+                            <textarea class="input-default"id="wounds-critical" rows="2"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="condition-group box">
+                        <h2>Fate Points</h2>
+                        <div class="form-group">
+                            <label for="fate-current">Current</label>
+                            <br/>
+                            <input class="input-default" type="number" id="fate-current">
+                        </div>
+                        <div class="form-group">
+                            <label for="fate-total">Total</label>
+                            <br/>
+                            <input class="input-default" type="number" id="fate-total">
+                        </div>
+                    </div>
+
+                    <div class="condition-group box">
+                        <h2>Corruption</h2>
+                        <div class="form-group">
+                            <label for="corruption-current">Current Points</label>
+                            <br/>
+                            <input class="input-default" type="number" id="corruption-current">
+                        </div>
+                        <div class="form-group">
+                            <label for="corruption-degree">Degree</label>
+                            <select class="input-default"id="corruption-degree">
+                                <option value="Pure">Pure</option>
+                                <option value="Tainted">Tainted</option>
+                                <option value="Soiled">Soiled</option>
+                                <option value="Debased">Debased</option>
+                                <option value="Profane">Profane</option>
+                                <option value="Damned">Damned</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="corruption-malignancies">Malignancies</label>
+                            <textarea class="input-default"id="corruption-malignancies" rows="2"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="condition-group box">
+                        <h2>Insanity</h2>
+                        <div class="form-group">
+                            <label for="insanity-current">Current Points</label>
+                            <br/>
+                            <input class="input-default" type="number" id="insanity-current">
+                        </div>
+                        <div class="form-group">
+                            <label for="insanity-degree">Degree</label>
+                            <select class="input-default"id="insanity-degree">
+                                <option value="Stable">Stable</option>
+                                <option value="Unsettled">Unsettled</option>
+                                <option value="Disturbed">Disturbed</option>
+                                <option value="Unhinged">Unhinged</option>
+                                <option value="Deranged">Deranged</option>
+                                <option value="Terminally Insane">Terminally Insane</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="insanity-disorders">Disorders</label>
+                            <textarea class="input-default"id="insanity-disorders" rows="2"></textarea>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Gear & Acquisitions -->
+                <div class="grid-3">
+                    <section class="gear box">
+                        <h2>Gear</h2>
+                        <div class="gear-list">
+                            <input class="input-default" type="text" id="gear-1" placeholder="Gear item 1">
+                            <input class="input-default" type="text" id="gear-2" placeholder="Gear item 2">
+                            <input class="input-default" type="text" id="gear-3" placeholder="Gear item 3">
+                            <input class="input-default" type="text" id="gear-4" placeholder="Gear item 4">
+                            <input class="input-default" type="text" id="gear-5" placeholder="Gear item 5">
+                            <input class="input-default" type="text" id="gear-6" placeholder="Gear item 6">
+                            <input class="input-default" type="text" id="gear-7" placeholder="Gear item 7">
+                            <input class="input-default" type="text" id="gear-8" placeholder="Gear item 8">
+                            <input class="input-default" type="text" id="gear-9" placeholder="Gear item 9">
+                            <input class="input-default" type="text" id="gear-11" placeholder="Gear item 11">
+                            <input class="input-default" type="text" id="gear-12" placeholder="Gear item 12">
+                            <input class="input-default" type="text" id="gear-13" placeholder="Gear item 13">
+                            <input class="input-default" type="text" id="gear-14" placeholder="Gear item 14">
+                            <input class="input-default" type="text" id="gear-15" placeholder="Gear item 15">
+                            <input class="input-default" type="text" id="gear-16" placeholder="Gear item 16">
+                            <input class="input-default" type="text" id="gear-17" placeholder="Gear item 17">
+                            <input class="input-default" type="text" id="gear-18" placeholder="Gear item 18">
+                            <input class="input-default" type="text" id="gear-19" placeholder="Gear item 19">
+                            <input class="input-default" type="text" id="gear-17" placeholder="Gear item 20">
+                            <input class="input-default" type="text" id="gear-18" placeholder="Gear item 21">
+                            <input class="input-default" type="text" id="gear-19" placeholder="Gear item 22">
+                            <input class="input-default" type="text" id="gear-18" placeholder="Gear item 23">
+                            <input class="input-default" type="text" id="gear-19" placeholder="Gear item 24">
+                        </div>
+                    </section>
+
+                    <!-- Acquisitions and Mutations -->
+                    <section class="acquisitions box">
+                        <h2>Acquisitions</h2>
+                        <input class="input-default" type="text" id="acquisition-1">
+                        <input class="input-default" type="text" id="acquisition-2">
+                        <input class="input-default" type="text" id="acquisition-3">
+                        <input class="input-default" type="text" id="acquisition-4">
+                        <input class="input-default" type="text" id="acquisition-5">
+                        <input class="input-default" type="text" id="acquisition-6">
+                        <input class="input-default" type="text" id="acquisition-7">
+                        <input class="input-default" type="text" id="acquisition-8">
+                        <input class="input-default" type="text" id="acquisition-9">
+                        <input class="input-default" type="text" id="acquisition-10">
+                        <input class="input-default" type="text" id="acquisition-11">
+                        <input class="input-default" type="text" id="acquisition-12">
+                    </section>
+                    <section class="mutations box">
+                        <h2>Mutations</h2>
+                        <input class="input-default" type="text" id="mutation-1">
+                        <input class="input-default" type="text" id="mutation-2">
+                        <input class="input-default" type="text" id="mutation-3">
+                        <input class="input-default" type="text" id="mutation-4">
+                        <input class="input-default" type="text" id="mutation-5">
+                        <input class="input-default" type="text" id="mutation-6">
+                    </section>
+                </div>
+            </section>
+
+            <footer class="sheet-footer">
+                <p>Permission granted to photocopy for personal use. © Games Workshop Ltd 2009.</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
